@@ -2,7 +2,7 @@
   "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
   "meta": {
     "brand": "Data Sapience",
-    "version": "1.3",
+    "version": "1.4",
     "updated": "2026-06-17",
     "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
     "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
@@ -732,10 +732,6 @@
           {
             "name": "Data Ocean Nova",
             "desc": "универсальная Lakehouse-платформа данных"
-          },
-          {
-            "name": "Data Ocean Flex Loader",
-            "desc": "пакетная репликация и интеграция данных"
           },
           {
             "name": "Data Ocean Cluster Manager",
