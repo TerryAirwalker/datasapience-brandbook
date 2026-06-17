@@ -14,11 +14,11 @@
     }
   },
   "how_agent_should_use": [
-    "Это источник правды по фирменному стилю. Не выдумывай цвета, шрифты, формы и тексты — бери из манифеста.",
-    "Слайды: всегда отталкивайся от шаблона assets.template. Сценарий A — если тип есть в slides.layout_to_type, добавляй слайд из соответствующего slide_layout и заполняй плейсхолдеры. Сценарий B — если макета нет, строй с нуля, но все токены (цвета, шрифты, формы, иконки) бери отсюда.",
-    "Соблюдай rules.forbidden. Тёплые цвета вне палитры запрещены.",
-    "Тексты о компании/продуктах бери из products; актуальная версия — meta.master_texts.",
-    "Чередуй фоны слайдов: не более 2 подряд на одном фоне (slides.background_rotation)."
+    "Это источник правды по фирменному стилю Data Sapience для ЛЮБЫХ материалов (слайды, документы, веб, соцсети, графика, инфографика).",
+    "Начни с entrypoint, затем по routing определи, какие ключи читать под свою задачу.",
+    "Не выдумывай цвета, шрифты, формы и тексты — бери из манифеста. Файлы (лого, шрифты, иконки, паттерны, шаблон) — из assets (репозиторий).",
+    "Слайды: всегда от шаблона (slides.agent_workflow). Графики/схемы: data_visualization. Тексты: products (актуальные — meta.master_texts).",
+    "Соблюдай rules_global.forbidden. Тёплые цвета вне палитры запрещены. Проверяй результат по checklist'ам."
   ],
   "colors": {
     "core": {
@@ -775,6 +775,220 @@
       "Продукты 1–6",
       "Контакты / 1_Контакты",
       "Пустой"
+    ],
+    "icons": "icons/ — icons-dark-on-light.jpg, icons-green-on-dark.jpg (превью библиотеки), icons-png-800.zip (340 линейных иконок PNG)",
+    "patterns": "patterns/pattern-01..12.png (Blob/Glow 01–03, Blob Filled 04–06, Blob Outline 07–09, Ribbon 10–12)",
+    "gradients": "gradients/gradient-01..03.png",
+    "graphics": "graphics/ring.png, symbol-3d.png, hexagon-3d.png (фирменные 3D-элементы)",
+    "missing": "Нет в репо: логотип линейки Data Ocean (другой брендинг → dataplatform.ru); векторные исходники (AI/EPS) паттернов и градиентов (есть только PNG)."
+  },
+  "entrypoint": {
+    "step1": "Загрузи весь JSON в контекст (он маленький).",
+    "step2": "Прочитай $schema_note и how_agent_should_use.",
+    "step3": "Определи тип задачи и возьми список ключей из routing.",
+    "step4": "Собери материал, используя ТОЛЬКО токены/правила из этих ключей; бинарные ассеты бери из assets (репо).",
+    "step5": "Проверь: rules_global.forbidden; слайды — slides.checklist; графики/схемы — data_visualization; тексты — products."
+  },
+  "routing": {
+    "presentation_slide": [
+      "slides",
+      "colors",
+      "typography",
+      "forms_glossary",
+      "logo",
+      "assets"
+    ],
+    "document_pdf_docx": [
+      "typography",
+      "colors",
+      "logo",
+      "layout",
+      "rules_global",
+      "assets"
+    ],
+    "web_page_or_landing": [
+      "colors",
+      "typography",
+      "gradients",
+      "forms_glossary",
+      "logo",
+      "layout",
+      "assets"
+    ],
+    "social_or_banner": [
+      "colors",
+      "typography",
+      "gradients",
+      "forms_glossary",
+      "logo",
+      "slides.icons",
+      "assets"
+    ],
+    "chart_or_infographic": [
+      "data_visualization",
+      "colors",
+      "typography",
+      "assets"
+    ],
+    "diagram_or_flowchart": [
+      "data_visualization",
+      "colors",
+      "typography",
+      "forms_glossary"
+    ],
+    "icon_usage": [
+      "slides.icons",
+      "colors",
+      "assets"
+    ],
+    "copywriting": [
+      "products",
+      "meta.master_texts"
+    ],
+    "get_assets": [
+      "assets"
+    ],
+    "any_other_material": [
+      "colors",
+      "typography",
+      "logo",
+      "forms_glossary",
+      "layout",
+      "rules_global",
+      "assets"
     ]
+  },
+  "layout": {
+    "grid_base_px": 8,
+    "spacing_scale_px": [
+      4,
+      8,
+      16,
+      24,
+      32,
+      48,
+      64
+    ],
+    "radius_px": {
+      "small": 4,
+      "medium": 8,
+      "large": 12,
+      "pill": 999
+    },
+    "content_max_width_px": 900,
+    "margins": {
+      "slides": "5–8% от ширины слайда",
+      "documents": "≥18–20 мм",
+      "web": "контент ≤ 900–1100px, адаптивные поля"
+    },
+    "shadows": {
+      "scale": [
+        "xs",
+        "sm",
+        "md",
+        "lg"
+      ],
+      "tone": "тил-тонированные (эффект lifted, не carved)",
+      "use": "точечно, для разделения слоёв"
+    },
+    "dividers": "#D4E8EE 1px"
+  },
+  "materials": {
+    "presentation": {
+      "go_to": "slides",
+      "notes": "всегда от шаблона assets.template; 6 фонов; чередовать фоны"
+    },
+    "document_pdf_docx": {
+      "bg": "белый или #F7F7F7",
+      "title": "Unbounded",
+      "body": "Ping LCG",
+      "logo": "полный на титуле, знак в колонтитуле",
+      "palette": "основная DS"
+    },
+    "web_landing": {
+      "bg": "белый или тёмный тил (#004158) для hero",
+      "decor": "градиенты + многоугольники/мягкое свечение в hero",
+      "accent": "#8DE969 для CTA",
+      "icons": "линейный набор (assets.icons)",
+      "notes": "colors — как CSS-переменные"
+    },
+    "social_banner": {
+      "bg": "тёмный тил или градиент",
+      "title": "Unbounded ExtraBold",
+      "logo": "полный или знак",
+      "decor": "шестиугольник / лента / многоугольники",
+      "accent": "#8DE969"
+    },
+    "infographic_chart": {
+      "go_to": "data_visualization",
+      "bg": "белый",
+      "notes": "один цвет на ряд, без тёплых"
+    },
+    "email": {
+      "bg": "белый",
+      "title": "Unbounded",
+      "body": "Ping LCG",
+      "accent": "#8DE969 для кнопок",
+      "logo": "знак в шапке"
+    }
+  },
+  "data_visualization": {
+    "ref_brandbook_tab": "Оформление графиков и схем",
+    "principles": [
+      "фон белый #FFFFFF или #F7F7F7 (тёмный #004158 — только hero)",
+      "оси/легенды/подписи — Ping LCG ~11px #6B8A96; заголовки — Unbounded SemiBold",
+      "сетка #D4E8EE 1px, только горизонтальные линии",
+      "один цвет на ряд данных, порядок от тёмного к светлому",
+      "тёплые цвета запрещены; #D94F4F — только отрицательные значения",
+      "подписи осей и единицы обязательны; легенда вне области данных"
+    ],
+    "bar": {
+      "single": "#004158",
+      "multi": "от тёмного к светлому одной палитры, ≤3 серий в группе",
+      "radius_px": "3–4",
+      "light_bar_label": "тёмная #1A2B32",
+      "neutral_plus_accent": "нейтрал #8DC0CD/#AEC2C9 + один акцент #8DE969"
+    },
+    "line": {
+      "width_px": 2,
+      "accent_width_px": 2.5,
+      "forecast": "пунктир dash5 gap3",
+      "markers": "круг 6px, цвет линии; на тёмном — белая обводка 1.5px; только при <15 точек"
+    },
+    "pie_donut": {
+      "gap": "2px белый зазор",
+      "donut_inner": "50–60%",
+      "when": "до 6 секторов — монохром тил; 7–8 — тил+аква; >8 — горизонтальный бар",
+      "highlight": "#8DE969 или смещение 4–6px"
+    },
+    "tables": {
+      "schemes": 6,
+      "header": "задаёт тон, белый текст",
+      "semantic": {
+        "strong_growth": "#2EA866",
+        "growth": "#8DE969 / #C2F0AB",
+        "neutral": "#EAF5F8",
+        "decline": "#FFF5F5",
+        "critical": "#D94F4F + белый текст"
+      },
+      "totals": "светлый вариант цвета шапки, Ping LCG Bold, разделитель 2px"
+    },
+    "schemes_flowcharts": {
+      "blocks": {
+        "start_end": "#004158, белый текст, скруг.прямоуг/эллипс",
+        "process": "#F7F7F7, обводка #D4E8EE, текст #1A2B32, radius 6",
+        "accent": "#4F9AAB, белый",
+        "decision": "ромб #CAE7EF, обводка #4F9AAB, текст #004158",
+        "external": "#1E5C82, белый",
+        "error": "обводка #D94F4F, фон #FFF5F5, текст #B83232"
+      },
+      "links": {
+        "main": "#4F9AAB 1.5px сплошная, треугольная стрелка",
+        "secondary": "пунктир #D4E8EE",
+        "labels": "Ping LCG 11px #6B8A96"
+      },
+      "max_nesting": 3,
+      "orthogonal": true
+    }
   }
 }
