@@ -1,1034 +1,1059 @@
 {
-  "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
-  "meta": {
-    "brand": "Data Sapience",
-    "version": "1.6",
-    "updated": "2026-06-17",
-    "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
-    "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
-    "master_texts": "https://docs.google.com/spreadsheets/d/1Dh4XPZVN5zseNpFHAjo1CmUsN146kSWm_G6whpzjTIU/edit?gid=1210120956",
-    "website": "https://datasapience.ru",
-    "contact": {
-      "email": "ms@datasapience.ru",
-      "person": "Марика Саар — руководитель маркетинга"
-    },
-    "skill": "https://github.com/TerryAirwalker/datasapience-brand-assets/tree/main/skill/datasapience-design"
+ "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
+ "meta": {
+  "brand": "Data Sapience",
+  "version": "1.7",
+  "updated": "2026-06-17",
+  "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
+  "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
+  "master_texts": "https://docs.google.com/spreadsheets/d/1Dh4XPZVN5zseNpFHAjo1CmUsN146kSWm_G6whpzjTIU/edit?gid=1210120956",
+  "website": "https://datasapience.ru",
+  "contact": {
+   "email": "ms@datasapience.ru",
+   "person": "Марика Саар — руководитель маркетинга"
   },
-  "how_agent_should_use": [
-    "Это источник правды по фирменному стилю Data Sapience для ЛЮБЫХ материалов (слайды, документы, веб, соцсети, графика, инфографика).",
-    "Начни с entrypoint, затем по routing определи, какие ключи читать под свою задачу.",
-    "Не выдумывай цвета, шрифты, формы и тексты — бери из манифеста. Файлы (лого, шрифты, иконки, паттерны, шаблон) — из assets (репозиторий).",
-    "Слайды: всегда от шаблона (slides.agent_workflow). Графики/схемы: data_visualization. Тексты: products (актуальные — meta.master_texts).",
-    "Соблюдай rules_global.forbidden. Тёплые цвета вне палитры запрещены. Проверяй результат по checklist'ам."
+  "skill": "https://github.com/TerryAirwalker/datasapience-brand-assets/tree/main/skill/datasapience-design"
+ },
+ "how_agent_should_use": [
+  "Это источник правды по фирменному стилю Data Sapience для ЛЮБЫХ материалов (слайды, документы, веб, соцсети, графика, инфографика).",
+  "Начни с entrypoint, затем по routing определи, какие ключи читать под свою задачу.",
+  "Не выдумывай цвета, шрифты, формы и тексты — бери из манифеста. Файлы (лого, шрифты, иконки, паттерны, шаблон) — из assets (репозиторий).",
+  "Слайды: всегда от шаблона (slides.agent_workflow). Графики/схемы: data_visualization. Тексты: products (актуальные — meta.master_texts).",
+  "Соблюдай rules_global.forbidden. Тёплые цвета вне палитры запрещены. Проверяй результат по checklist'ам."
+ ],
+ "colors": {
+  "core": {
+   "dark": {
+    "hex": "#004158",
+    "role": "основной бренд-тил; фоны, заголовки на светлом"
+   },
+   "mid": {
+    "hex": "#4F9AAB",
+    "role": "вторичный тил; акцент, интерактив, ссылки"
+   },
+   "light": {
+    "hex": "#CAE7EF",
+    "role": "светло-голубой; вторичные фоны"
+   },
+   "green": {
+    "hex": "#8DE969",
+    "role": "акцент; теги, статусы, CTA, выделение — дозированно, не как фон"
+   }
+  },
+  "neutrals": {
+   "gray": {
+    "hex": "#F7F7F7",
+    "role": "светлый фон"
+   },
+   "text": {
+    "hex": "#1A2B32",
+    "role": "основной текст"
+   },
+   "sub": {
+    "hex": "#6B8A96",
+    "role": "вторичный текст, подписи"
+   },
+   "line": {
+    "hex": "#D4E8EE",
+    "role": "разделители, сетка"
+   },
+   "red": {
+    "hex": "#D94F4F",
+    "role": "ТОЛЬКО ошибки / отрицательные отклонения"
+   }
+  },
+  "extended_palette": {
+   "usage": "Только для инфографики и диаграмм, когда мало основных. Не для логотипа/заголовков/крупных плашек. Не более 2 доп.палитр в одном макете. Холодная гамма.",
+   "hex_examples": [
+    "#8DC0CD",
+    "#1E5C82",
+    "#2EA866",
+    "#C2F0AB",
+    "#AEC2C9",
+    "#4B379F",
+    "#6A55C4",
+    "#3E80A8",
+    "#EAF5F8"
+   ]
+  },
+  "forbidden": [
+   "оранжевый",
+   "жёлтый",
+   "красный (кроме ошибок)",
+   "любые тёплые цвета вне палитры"
+  ]
+ },
+ "typography": {
+  "fonts": {
+   "heading": {
+    "family": "Unbounded",
+    "use": "заголовки, логотип, акцентные надписи",
+    "weights": [
+     200,
+     400,
+     500,
+     600,
+     700,
+     800
+    ]
+   },
+   "body": {
+    "family": "Ping LCG",
+    "use": "основной текст, описания, подписи, UI",
+    "weights": [
+     300,
+     400,
+     500,
+     700
+    ]
+   }
+  },
+  "forbidden_fonts": [
+   "Arial",
+   "Calibri",
+   "Times New Roman",
+   "любые системные/сторонние"
   ],
-  "colors": {
-    "core": {
-      "dark": {
-        "hex": "#004158",
-        "role": "основной бренд-тил; фоны, заголовки на светлом"
-      },
-      "mid": {
-        "hex": "#4F9AAB",
-        "role": "вторичный тил; акцент, интерактив, ссылки"
-      },
-      "light": {
-        "hex": "#CAE7EF",
-        "role": "светло-голубой; вторичные фоны"
-      },
-      "green": {
-        "hex": "#8DE969",
-        "role": "акцент; теги, статусы, CTA, выделение — дозированно, не как фон"
-      }
-    },
-    "neutrals": {
-      "gray": {
-        "hex": "#F7F7F7",
-        "role": "светлый фон"
-      },
-      "text": {
-        "hex": "#1A2B32",
-        "role": "основной текст"
-      },
-      "sub": {
-        "hex": "#6B8A96",
-        "role": "вторичный текст, подписи"
-      },
-      "line": {
-        "hex": "#D4E8EE",
-        "role": "разделители, сетка"
-      },
-      "red": {
-        "hex": "#D94F4F",
-        "role": "ТОЛЬКО ошибки / отрицательные отклонения"
-      }
-    },
-    "extended_palette": {
-      "usage": "Только для инфографики и диаграмм, когда мало основных. Не для логотипа/заголовков/крупных плашек. Не более 2 доп.палитр в одном макете. Холодная гамма.",
-      "hex_examples": [
-        "#8DC0CD",
-        "#1E5C82",
-        "#2EA866",
-        "#C2F0AB",
-        "#AEC2C9",
-        "#4B379F",
-        "#6A55C4",
-        "#3E80A8",
-        "#EAF5F8"
-      ]
-    },
-    "forbidden": [
-      "оранжевый",
-      "жёлтый",
-      "красный (кроме ошибок)",
-      "любые тёплые цвета вне палитры"
-    ]
-  },
-  "typography": {
-    "fonts": {
-      "heading": {
-        "family": "Unbounded",
-        "use": "заголовки, логотип, акцентные надписи",
-        "weights": [
-          200,
-          400,
-          500,
-          600,
-          700,
-          800
-        ]
-      },
-      "body": {
-        "family": "Ping LCG",
-        "use": "основной текст, описания, подписи, UI",
-        "weights": [
-          300,
-          400,
-          500,
-          700
-        ]
-      }
-    },
-    "forbidden_fonts": [
-      "Arial",
-      "Calibri",
-      "Times New Roman",
-      "любые системные/сторонние"
-    ],
-    "hierarchy_general": [
-      {
-        "level": "H1",
-        "font": "Unbounded Bold",
-        "size_pt": "28–44",
-        "use": "главный заголовок, обложка"
-      },
-      {
-        "level": "H2",
-        "font": "Unbounded SemiBold",
-        "size_pt": "18–24",
-        "use": "заголовок раздела"
-      },
-      {
-        "level": "H3",
-        "font": "Unbounded Medium",
-        "size_pt": "13–16",
-        "use": "подзаголовок, метка"
-      },
-      {
-        "level": "Lead",
-        "font": "Ping LCG Medium",
-        "size_pt": "12–14",
-        "use": "вводный абзац, акцент"
-      },
-      {
-        "level": "Body",
-        "font": "Ping LCG Regular",
-        "size_pt": "9–11",
-        "use": "основной текст"
-      },
-      {
-        "level": "Caption",
-        "font": "Ping LCG Light",
-        "size_pt": "7–8",
-        "use": "подписи, сноски"
-      }
-    ],
-    "on_slides": {
-      "rules": [
-        "не более 3 уровней текста на слайде",
-        "≤ 6–7 строк буллетов",
-        "основной текст ≥ 12 pt, подписи ≥ 11 pt",
-        "одинаковый размер для одного уровня по всей презентации",
-        "интерлиньяж буллетов 1.3–1.5"
-      ],
-      "roles": [
-        {
-          "role": "Заголовок слайда",
-          "font": "Unbounded Bold/SemiBold",
-          "size_pt": "24–32",
-          "color_dark_bg": "#FFFFFF",
-          "color_light_bg": "#004158"
-        },
-        {
-          "role": "Подзаголовок",
-          "font": "Ping LCG Medium",
-          "size_pt": "16–20",
-          "color_dark_bg": "#CAE7EF",
-          "color_light_bg": "#4F9AAB"
-        },
-        {
-          "role": "Основной текст/буллеты",
-          "font": "Ping LCG Regular",
-          "size_pt": "14–16",
-          "color_dark_bg": "rgba(255,255,255,.85)",
-          "color_light_bg": "#1A2B32"
-        },
-        {
-          "role": "Подписи/сноски",
-          "font": "Ping LCG Regular",
-          "size_pt": "11–12",
-          "color_dark_bg": "#4F9AAB",
-          "color_light_bg": "#6B8A96"
-        },
-        {
-          "role": "Акцент",
-          "font": "Ping LCG Bold / Unbounded",
-          "size_pt": "=роль",
-          "color_dark_bg": "#8DE969",
-          "color_light_bg": "#004158"
-        },
-        {
-          "role": "Заголовок обложки",
-          "font": "Unbounded ExtraBold",
-          "size_pt": "36–48",
-          "color_dark_bg": "#FFFFFF"
-        },
-        {
-          "role": "Номер раздела",
-          "font": "Unbounded ExtraBold",
-          "size_pt": "64–96",
-          "color_dark_bg": "rgba(255,255,255,.15)",
-          "color_light_bg": "rgba(0,65,88,.1)"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "variants": [
-      {
-        "id": "full",
-        "name": "Полный логотип (знак + «data sapience»)",
-        "default": true
-      },
-      {
-        "id": "symbol",
-        "name": "Только знак (символ ds)"
-      }
-    ],
-    "forbidden_variants": [
-      "только текст без знака"
-    ],
-    "color_by_bg": {
-      "dark_bg": "белый логотип",
-      "light_bg": "тёмный логотип"
-    },
-    "clear_zone": "свободная зона = высота символа (X) со всех сторон",
-    "min_sizes": {
-      "screen_full_px": 120,
-      "screen_symbol_px": 32,
-      "favicon_px": 16,
-      "print_full_mm": 40,
-      "print_symbol_mm": 10
-    },
-    "on_slides": "Полный логотип ТОЛЬКО на обложке и финальном слайде «Контакты». На рабочих слайдах — знак в углу или без логотипа.",
-    "forbidden": [
-      "менять форму/пропорции/цвет",
-      "нефирменные цвета",
-      "тени/обводки/эффекты",
-      "поворот",
-      "фон, близкий по тону к логотипу"
-    ],
-    "layouts": {
-      "horizontal": "основной; веб-шапки, презентации, документы — по умолчанию",
-      "stacked": "квадратные/вертикальные форматы, компактный блок",
-      "side": "двухстрочный акцент; колонтитулы, баннеры",
-      "symbol": "только знак; узнаваемый контекст (аватар, фавикон, иконка приложения), min 32px"
-    },
-    "colors": {
-      "black": "на светлом/сером фоне",
-      "blue": "#004158 — фирменный, на белом фоне",
-      "white": "на тёмном/брендовом фоне"
-    },
-    "color_rule": "тёмный фон → white; светлый → black или blue (фирменный синий #004158)",
-    "files": {
-      "repo_dir": "logos/png/variants",
-      "pattern": "{layout}-{color}.png  (layout: horizontal|stacked|side|symbol; color: black|blue|white) — 12 версий",
-      "svg_source": "logos/svg (full/symbol/text · black/white)"
-    }
-  },
-  "forms_glossary": [
-    {
-      "id": "soft_glow",
-      "name": "Мягкое свечение",
-      "aka": "Blob / Glow",
-      "patterns": "01–03",
-      "use": "мягкие световые пятна, глубина и «воздух»"
-    },
-    {
-      "id": "polygon_filled",
-      "name": "Залитый многоугольник",
-      "aka": "Blob Filled",
-      "patterns": "04–06",
-      "use": "заполнение пространства, акцентные секции (тёмные фоны)"
-    },
-    {
-      "id": "polygon_outline",
-      "name": "Контурный многоугольник",
-      "aka": "Blob Outline",
-      "patterns": "07–09",
-      "use": "светлые и нейтральные фоны"
-    },
-    {
-      "id": "ribbon",
-      "name": "Лента / контурная кривая",
-      "aka": "Ribbon",
-      "patterns": "10–12",
-      "use": "обложки, ощущение движения; тонкие белые кривые на тёмных/градиентных фонах"
-    },
-    {
-      "id": "hexagon",
-      "name": "Шестиугольник",
-      "aka": "знак-мотив, контейнер",
-      "use": "иконки-контейнеры, схемы-пауки, цепочки процессов, фото-ячейки команды"
-    },
-    {
-      "id": "green_line",
-      "name": "Зелёная линия",
-      "hex": "#8DE969",
-      "use": "разделители строк/столбцов в таблицах, Gantt, схемах — на тёмных и средних фонах"
-    }
+  "hierarchy_general": [
+   {
+    "level": "H1",
+    "font": "Unbounded Bold",
+    "size_pt": "28–44",
+    "use": "главный заголовок, обложка"
+   },
+   {
+    "level": "H2",
+    "font": "Unbounded SemiBold",
+    "size_pt": "18–24",
+    "use": "заголовок раздела"
+   },
+   {
+    "level": "H3",
+    "font": "Unbounded Medium",
+    "size_pt": "13–16",
+    "use": "подзаголовок, метка"
+   },
+   {
+    "level": "Lead",
+    "font": "Ping LCG Medium",
+    "size_pt": "12–14",
+    "use": "вводный абзац, акцент"
+   },
+   {
+    "level": "Body",
+    "font": "Ping LCG Regular",
+    "size_pt": "9–11",
+    "use": "основной текст"
+   },
+   {
+    "level": "Caption",
+    "font": "Ping LCG Light",
+    "size_pt": "7–8",
+    "use": "подписи, сноски"
+   }
   ],
-  "gradients": {
-    "desc": "3 фирменных градиента в рамках палитры (белый→голубой→тёмный тил)",
-    "use": "обложки, hero, баннеры, таблицы/Gantt"
-  },
-  "slides": {
-    "canvas": {
-      "ratio": "16:9",
-      "size_pt": "1057 × 595.5",
-      "size_cm": "≈37.3 × 21",
-      "orientation": "только горизонтальная",
-      "format": ".pptx",
-      "pdf_export": "Файл → Экспорт → PDF (не «Напечатать»); встраивать шрифты"
+  "on_slides": {
+   "rules": [
+    "не более 3 уровней текста на слайде",
+    "≤ 6–7 строк буллетов",
+    "основной текст ≥ 12 pt, подписи ≥ 11 pt",
+    "одинаковый размер для одного уровня по всей презентации",
+    "интерлиньяж буллетов 1.3–1.5"
+   ],
+   "roles": [
+    {
+     "role": "Заголовок слайда",
+     "font": "Unbounded Bold/SemiBold",
+     "size_pt": "24–32",
+     "color_dark_bg": "#FFFFFF",
+     "color_light_bg": "#004158"
     },
-    "backgrounds": [
-      {
-        "id": "dark_blob",
-        "name": "Тёмный Blob",
-        "base": "#004158",
-        "text": "белый",
-        "accent": "#8DE969",
-        "use": "обложки, разделители, цитаты"
-      },
-      {
-        "id": "light_blob",
-        "name": "Светлый Blob",
-        "base": "#FFFFFF",
-        "text": "#004158 / #1A2B32",
-        "use": "контентные слайды с текстом"
-      },
-      {
-        "id": "lightblue_blob",
-        "name": "Светло-голубой Blob",
-        "base": "#CAE7EF",
-        "text": "тёмный",
-        "use": "вторичные слайды, схемы"
-      },
-      {
-        "id": "dark_flat",
-        "name": "Тёмный плоский",
-        "base": "#004158",
-        "use": "плашки сравнения, фоны схем"
-      },
-      {
-        "id": "mid_blob",
-        "name": "Средний тил Blob",
-        "base": "#4F9AAB",
-        "text": "белый",
-        "use": "промежуточные слайды, разделители"
-      },
-      {
-        "id": "gradient",
-        "name": "Градиент",
-        "base": "белый→голубой→тёмный тил",
-        "use": "обложки-альтернатива, Gantt, таблицы"
-      }
-    ],
-    "background_rotation": "Не более 2 слайдов подряд на одном фоне — далее переключай (тёмный ↔ светлый). Большинство типов есть в свет/тёмн варианте с одинаковым наполнением.",
-    "types": [
-      {
-        "n": 1,
-        "name": "Обложка",
-        "layout": "Заголовок 1, Заголовок 2",
-        "bg_variants": [
-          "тёмный",
-          "светлый"
-        ],
-        "demo_slides": "1–2"
-      },
-      {
-        "n": 2,
-        "name": "Оглавление",
-        "layout": "Оглавление 1–4",
-        "bg_variants": [
-          "светлый",
-          "тёмный"
-        ],
-        "demo_slides": "3–6"
-      },
-      {
-        "n": 3,
-        "name": "Заголовок раздела",
-        "layout": "Заголовок раздела",
-        "bg_variants": [
-          "светлый",
-          "градиент"
-        ],
-        "demo_slides": "7"
-      },
-      {
-        "n": 4,
-        "name": "Револьвер (схема-паук)",
-        "layout": "Револьвер 1–2",
-        "bg_variants": [
-          "светлый",
-          "тёмный"
-        ],
-        "demo_slides": "8–9"
-      },
-      {
-        "n": 5,
-        "name": "Таблица",
-        "layout": "Таблица 1–2",
-        "bg_variants": [
-          "градиент",
-          "светлый"
-        ],
-        "demo_slides": "10–11"
-      },
-      {
-        "n": 6,
-        "name": "Сравнение «тиски»",
-        "layout": "Сравнение (тиски) 1–3",
-        "bg_variants": [
-          "светлый+тёмный"
-        ],
-        "demo_slides": "12–14"
-      },
-      {
-        "n": 7,
-        "name": "Одна мысль",
-        "layout": "Одна мысль",
-        "bg_variants": [
-          "тёмный",
-          "светлый"
-        ],
-        "demo_slides": "15"
-      },
-      {
-        "n": 8,
-        "name": "Буллиты",
-        "layout": "Буллиты 2/3/4/6/8 (светлые/тёмные)",
-        "bg_variants": [
-          "светлый",
-          "тёмный"
-        ],
-        "demo_slides": "16–25"
-      },
-      {
-        "n": 9,
-        "name": "Картинки и графики",
-        "layout": "Картинки и графики 1–4",
-        "bg_variants": [
-          "разные"
-        ],
-        "demo_slides": "26–29"
-      },
-      {
-        "n": 10,
-        "name": "Роадмап / Gantt",
-        "layout": "Роадмап 1–4",
-        "bg_variants": [
-          "градиент"
-        ],
-        "demo_slides": "30–33"
-      },
-      {
-        "n": 11,
-        "name": "Процесс / цепочка",
-        "layout": "Процесс 1–4",
-        "bg_variants": [
-          "тёмный",
-          "светлый"
-        ],
-        "demo_slides": "34–37"
-      },
-      {
-        "n": 12,
-        "name": "Команда",
-        "layout": "Команда 1–2",
-        "bg_variants": [
-          "светлый",
-          "тёмный"
-        ],
-        "demo_slides": "38–39"
-      },
-      {
-        "n": 13,
-        "name": "Продукты",
-        "layout": "Продукты 1–6",
-        "bg_variants": [
-          "тёмный+средний"
-        ],
-        "demo_slides": "40–45"
-      },
-      {
-        "n": 14,
-        "name": "Контакты (финал)",
-        "layout": "Контакты, 1_Контакты",
-        "bg_variants": [
-          "тёмный",
-          "светлый"
-        ],
-        "demo_slides": "46–47"
-      },
-      {
-        "n": 0,
-        "name": "Пустой",
-        "layout": "Пустой",
-        "bg_variants": [
-          "любой"
-        ],
-        "demo_slides": "48+"
-      }
-    ],
-    "assembly_steps": [
-      "1. Выбрать тип и фон из шаблона (не создавать фон вручную).",
-      "2. Добавить декор и логотип (логотип — только на обложке/контактах; декор не масштабировать; поля 5–8%).",
-      "3. Разместить контент фирменными шрифтами, не выходя за поля."
-    ],
-    "agent_workflow": {
-      "principle": "Всегда от шаблона assets.template, никогда с пустого документа.",
-      "scenario_A_from_template": [
-        "open Presentation('Data Sapience template.pptx')",
-        "тип → slide_layout по layout_to_type",
-        "slides.add_slide(layout); заполнить плейсхолдеры",
-        "не переопределять шрифты/цвета вручную; не воссоздавать фигуры",
-        "python-pptx плохо дублирует готовые слайды — использовать макеты"
-      ],
-      "scenario_B_redraw_from_scratch": [
-        "когда нетиповой слайд / нет макета",
-        "строить с нуля, но все токены брать из этого манифеста (colors, typography, forms_glossary, slides.icons, slides.images)",
-        "итог проверить по slides.checklist; быть неотличимым от собранного из шаблона"
-      ]
+    {
+     "role": "Подзаголовок",
+     "font": "Ping LCG Medium",
+     "size_pt": "16–20",
+     "color_dark_bg": "#CAE7EF",
+     "color_light_bg": "#4F9AAB"
     },
-    "icons": {
-      "set": "единый линейный набор из шаблона",
-      "style": "одинаковая толщина обводки, скруглённые концы, без заливки",
-      "color_variants": [
-        {
-          "bg": "светлый",
-          "color": "#004158"
-        },
-        {
-          "bg": "тёмный",
-          "color": "#8DE969 или #CAE7EF"
-        }
-      ],
-      "container": "шестиугольник-контейнер",
-      "forbidden": [
-        "сторонние наборы (Material, Font Awesome) и эмодзи",
-        "растягивать/искажать",
-        "заливать",
-        "тени/объём/градиенты",
-        "нефирменные цвета"
-      ]
+    {
+     "role": "Основной текст/буллеты",
+     "font": "Ping LCG Regular",
+     "size_pt": "14–16",
+     "color_dark_bg": "rgba(255,255,255,.85)",
+     "color_light_bg": "#1A2B32"
     },
-    "images": {
-      "principle": "Собственная графика, а не сток-фото",
-      "brand_elements": [
-        "3D-кольцо/орбита",
-        "объёмный шестиугольник",
-        "многоугольники"
-      ],
-      "photo_treatment": [
-        "дуотон фирменного тила (тени #004158 → света #CAE7EF) или тинт #004158",
-        "скругление ~8px или маска фирменной формой",
-        "скриншоты — рамка #D4E8EE 1px на белой подложке"
-      ],
-      "forbidden": [
-        "пёстрые сток-фото в тёплых тонах",
-        "фото без обработки",
-        "искажение пропорций"
-      ],
-      "charts_ref": "диаграммы/таблицы/схемы — по вкладке «Оформление графиков и схем» брендбука"
+    {
+     "role": "Подписи/сноски",
+     "font": "Ping LCG Regular",
+     "size_pt": "11–12",
+     "color_dark_bg": "#4F9AAB",
+     "color_light_bg": "#6B8A96"
     },
-    "checklist": [
-      "слайд из шаблона",
-      "16:9 горизонтальный",
-      "мастер не изменён",
-      "логотип на обложке+контактах",
-      "шрифты Unbounded/Ping LCG, без системных",
-      "≤3 уровней текста, ≤6–7 буллетов, ≥12pt",
-      "только палитра DS (+расширенная точечно)",
-      "нет тёплых цветов",
-      "зелёный — только акцент",
-      "поля 5–8%",
-      "декор в угловых/краевых зонах",
-      "один тип фона на смысловой блок",
-      "шрифты внедрены при экспорте"
-    ],
-    "layout_to_type": {
-      "Заголовок 1": "Обложка",
-      "Заголовок 2": "Обложка",
-      "Оглавление 1": "Оглавление",
-      "Оглавление 2": "Оглавление",
-      "Оглавление 3": "Оглавление",
-      "Оглавление 4": "Оглавление",
-      "Заголовок раздела": "Заголовок раздела",
-      "Револьвер 1": "Револьвер (схема-паук)",
-      "Револьвер 2": "Револьвер (схема-паук)",
-      "Таблица 1": "Таблица",
-      "Таблица 2": "Таблица",
-      "Сравнение (тиски) 1": "Сравнение «тиски»",
-      "Сравнение (тиски) 2": "Сравнение «тиски»",
-      "Сравнение (тиски) 3": "Сравнение «тиски»",
-      "Одна мысль": "Одна мысль",
-      "Буллиты 2/3/4/6/8 (светлые/тёмные)": "Буллиты",
-      "Картинки и графики 1-4": "Картинки и графики",
-      "Роадмап 1-4": "Роадмап / Gantt",
-      "Процесс 1-4": "Процесс / цепочка",
-      "Команда 1-2": "Команда",
-      "Продукты 1-6": "Продукты",
-      "Контакты": "Контакты (финал)",
-      "1_Контакты": "Контакты (финал)",
-      "Пустой": "Произвольная компоновка (иконки/лого-листы)"
+    {
+     "role": "Акцент",
+     "font": "Ping LCG Bold / Unbounded",
+     "size_pt": "=роль",
+     "color_dark_bg": "#8DE969",
+     "color_light_bg": "#004158"
+    },
+    {
+     "role": "Заголовок обложки",
+     "font": "Unbounded ExtraBold",
+     "size_pt": "36–48",
+     "color_dark_bg": "#FFFFFF"
+    },
+    {
+     "role": "Номер раздела",
+     "font": "Unbounded ExtraBold",
+     "size_pt": "64–96",
+     "color_dark_bg": "rgba(255,255,255,.15)",
+     "color_light_bg": "rgba(0,65,88,.1)"
     }
-  },
-  "rules_global": {
-    "do": [
-      "использовать готовые токены и ассеты",
-      "комбинировать по правилам разделов",
-      "сокращать тексты, сохраняя смысл"
-    ],
-    "forbidden": [
-      "менять логотип",
-      "нефирменные цвета/шрифты/иконки",
-      "тёплые цвета",
-      "перекрашивать паттерны",
-      "менять по смыслу описания продуктов"
-    ]
-  },
-  "products": {
-    "company": {
-      "name": "Data Sapience",
-      "summary": "Российский вендор, разработчик ИТ-решений для бизнеса. Входит в группу компаний GlowByte. Команда с 20-летним опытом. Все продукты — в Реестре отечественного ПО.",
-      "note_facts": "Развёртывание (облако/on-prem/гибрид) и подход к сборке исходников (open source) — только в общей справке «О компании», НЕ в описаниях отдельных продуктов."
-    },
-    "naming": {
-      "correct": [
-        "Kolmogorov AI",
-        "TALYS Ocean",
-        "DOG EMM",
-        "DOG DQ"
-      ],
-      "sub_dotted": [
-        "TALYS.SDE",
-        "TALYS.AML"
-      ]
-    },
-    "lines": [
-      {
-        "name": "CM Ocean",
-        "desc": "платформа CVM-маркетинга",
-        "sub": [
-          {
-            "name": "CM Ocean Audience",
-            "desc": "управление маркетинговыми данными"
-          },
-          {
-            "name": "CM Ocean BatchFlow",
-            "desc": "offline-маркетинг"
-          },
-          {
-            "name": "CM Ocean Real-time Flow",
-            "desc": "online-маркетинг"
-          },
-          {
-            "name": "CM Ocean Template",
-            "desc": "библиотека шаблонов коммуникаций"
-          },
-          {
-            "name": "CM Ocean Policy",
-            "desc": "контактная и продуктовая политики"
-          },
-          {
-            "name": "CM Ocean Communication",
-            "desc": "коммуникационный хаб"
-          },
-          {
-            "name": "CM Ocean Optimum",
-            "desc": "оптимизация маркетинговых предложений"
-          },
-          {
-            "name": "CM Ocean Offer",
-            "desc": "каталог маркетинговых предложений"
-          },
-          {
-            "name": "CM Ocean Control",
-            "desc": "управление жизненным циклом кампаний"
-          },
-          {
-            "name": "CM Ocean Digital",
-            "desc": "сбор данных и персонализация цифровых каналов"
-          }
-        ]
-      },
-      {
-        "name": "TALYS Ocean",
-        "desc": "платформа интегрированного управления рисками",
-        "sub": [
-          {
-            "name": "TALYS.SDE",
-            "desc": "онлайн-движок для принятия решений по кредитным и другим видам рисков и антифроду в реальном времени"
-          },
-          {
-            "name": "TALYS.AML",
-            "desc": "финансовый мониторинг: ПОД/ФТ и комплаенс (115-ФЗ, FATCA/CRS, санкции)"
-          },
-          {
-            "name": "TALYS.OpRisk",
-            "desc": "управление операционными рисками"
-          },
-          {
-            "name": "TALYS.Motor",
-            "desc": "сегментация ОСАГО"
-          }
-        ]
-      },
-      {
-        "name": "Kolmogorov AI",
-        "desc": "платформа аналитики данных, машинного обучения и LLM/MLOps",
-        "sub": [
-          {
-            "name": "Kolmogorov Continuity",
-            "desc": "управление жизненным циклом моделей и аналитических проектов (Decision Ops)"
-          },
-          {
-            "name": "Kolmogorov Axiom",
-            "desc": "Feature Store с low-code конструктором датасетов"
-          },
-          {
-            "name": "Kolmogorov Continuity-LLM",
-            "desc": "создание, тестирование и безопасный деплой AI-агентов"
-          },
-          {
-            "name": "Kolmogorov ABacus",
-            "desc": "фреймворк для A/B-тестирования"
-          },
-          {
-            "name": "Kolmogorov Predicate",
-            "desc": "мониторинг качества аналитических продуктов"
-          },
-          {
-            "name": "Kolmogorov Continuity-A2P",
-            "desc": "работа с моделями"
-          }
-        ]
-      },
-      {
-        "name": "Data Ocean Governance",
-        "desc": "платформа управления данными организации",
-        "sub": [
-          {
-            "name": "DOG EMM",
-            "desc": "управление метаданными: каталог данных и бизнес-глоссарий, взгляд 360°"
-          },
-          {
-            "name": "DOG DQ",
-            "desc": "управление качеством данных: дата-контракты и инциденты"
-          },
-          {
-            "name": "DOG MDM",
-            "desc": "управление мастер-данными: очистка, обогащение, стандартизация, дедубликация"
-          },
-          {
-            "name": "Ingresso One",
-            "desc": "организация и автоматизация работы со справочными (НСИ) и пользовательскими данными"
-          }
-        ]
-      },
-      {
-        "name": "Data Ocean",
-        "desc": "платформа данных",
-        "branding_note": "Отдельный самостоятельный фирменный стиль (dataplatform.ru). В составе материалов Data Sapience («в комплекте») продукты используют логотипы, перекрашенные в палитру DS + белые версии — есть в брендбуке (раздел Data Ocean) и в assets logos/products/png/data-ocean (Nova, Cluster Manager, SDI).",
-        "sub": [
-          {
-            "name": "Data Ocean Nova",
-            "desc": "универсальная Lakehouse-платформа данных"
-          },
-          {
-            "name": "Data Ocean Cluster Manager",
-            "desc": "администрирование кластеров и анализ запросов"
-          },
-          {
-            "name": "Data Ocean SDI",
-            "desc": "low-code потоковая обработка и репликация данных"
-          }
-        ]
-      }
-    ],
-    "excluded": [
-      {
-        "name": "TALYS.Antifraud",
-        "reason": "в источнике помечен «пока не трогаем»"
-      }
-    ]
-  },
-  "assets": {
-    "repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
-    "logos": "logos/svg (full/symbol/text · black/white) · logos/png/variants (12 PNG: horizontal/stacked/side/symbol × black/blue/white) · logos/products (исходники + png + png/data-ocean)",
-    "fonts": "fonts/Unbounded.zip, fonts/PingLCG.zip",
-    "template": "templates/Data-Sapience-template.pptx",
-    "template_layouts": [
-      "Заголовок 1/2",
-      "Оглавление 1–4",
-      "Заголовок раздела",
-      "Револьвер 1–2",
-      "Таблица 1–2",
-      "Сравнение (тиски) 1–3",
-      "Одна мысль",
-      "Буллиты 2/3/4/6/8 свет/тёмн",
-      "Картинки и графики 1–4",
-      "Роадмап 1–4",
-      "Процесс 1–4",
-      "Команда 1–2",
-      "Продукты 1–6",
-      "Контакты / 1_Контакты",
-      "Пустой"
-    ],
-    "icons": "icons/ — icons-dark-on-light.jpg, icons-green-on-dark.jpg (превью) + icons-png-800.zip (340 линейных иконок PNG)",
-    "patterns": "patterns/{png,eps,ai} — talys_pattern-01..12 (Blob/Glow 01–03, Blob Filled 04–06, Blob Outline 07–09, Ribbon 10–12)",
-    "gradients": "gradients/{png,eps,ai} — talys_gradient-01..03",
-    "graphics": "graphics/ring.png, symbol-3d.png, hexagon-3d.png (фирменные 3D-элементы)",
-    "missing": "Полный самостоятельный фирменный стиль Data Ocean — внешний (dataplatform.ru); в брендбуке/репо — только DS-перекрашенные («комплектные») версии логотипов Data Ocean."
-  },
-  "entrypoint": {
-    "step1": "Загрузи весь JSON в контекст (он маленький).",
-    "step2": "Прочитай $schema_note и how_agent_should_use.",
-    "step3": "Определи тип задачи и возьми список ключей из routing.",
-    "step4": "Собери материал, используя ТОЛЬКО токены/правила из этих ключей; бинарные ассеты бери из assets (репо).",
-    "step5": "Проверь: rules_global.forbidden; слайды — slides.checklist; графики/схемы — data_visualization; тексты — products."
-  },
-  "routing": {
-    "presentation_slide": [
-      "slides",
-      "colors",
-      "typography",
-      "forms_glossary",
-      "logo",
-      "assets"
-    ],
-    "document_pdf_docx": [
-      "typography",
-      "colors",
-      "logo",
-      "layout",
-      "rules_global",
-      "assets"
-    ],
-    "web_page_or_landing": [
-      "colors",
-      "typography",
-      "gradients",
-      "forms_glossary",
-      "logo",
-      "layout",
-      "assets"
-    ],
-    "social_or_banner": [
-      "colors",
-      "typography",
-      "gradients",
-      "forms_glossary",
-      "logo",
-      "slides.icons",
-      "assets"
-    ],
-    "chart_or_infographic": [
-      "data_visualization",
-      "colors",
-      "typography",
-      "assets"
-    ],
-    "diagram_or_flowchart": [
-      "data_visualization",
-      "colors",
-      "typography",
-      "forms_glossary"
-    ],
-    "icon_usage": [
-      "slides.icons",
-      "colors",
-      "assets"
-    ],
-    "copywriting": [
-      "products",
-      "meta.master_texts"
-    ],
-    "get_assets": [
-      "assets"
-    ],
-    "any_other_material": [
-      "colors",
-      "typography",
-      "logo",
-      "forms_glossary",
-      "layout",
-      "rules_global",
-      "assets"
-    ]
-  },
-  "layout": {
-    "grid_base_px": 8,
-    "spacing_scale_px": [
-      4,
-      8,
-      16,
-      24,
-      32,
-      48,
-      64
-    ],
-    "radius_px": {
-      "small": 4,
-      "medium": 8,
-      "large": 12,
-      "pill": 999
-    },
-    "content_max_width_px": 900,
-    "margins": {
-      "slides": "5–8% от ширины слайда",
-      "documents": "≥18–20 мм",
-      "web": "контент ≤ 900–1100px, адаптивные поля"
-    },
-    "shadows": {
-      "scale": [
-        "xs",
-        "sm",
-        "md",
-        "lg"
-      ],
-      "tone": "тил-тонированные (эффект lifted, не carved)",
-      "use": "точечно, для разделения слоёв"
-    },
-    "dividers": "#D4E8EE 1px"
-  },
-  "materials": {
-    "presentation": {
-      "go_to": "slides",
-      "notes": "всегда от шаблона assets.template; 6 фонов; чередовать фоны"
-    },
-    "document_pdf_docx": {
-      "bg": "белый или #F7F7F7",
-      "title": "Unbounded",
-      "body": "Ping LCG",
-      "logo": "полный на титуле, знак в колонтитуле",
-      "palette": "основная DS"
-    },
-    "web_landing": {
-      "bg": "белый или тёмный тил (#004158) для hero",
-      "decor": "градиенты + многоугольники/мягкое свечение в hero",
-      "accent": "#8DE969 для CTA",
-      "icons": "линейный набор (assets.icons)",
-      "notes": "colors — как CSS-переменные"
-    },
-    "social_banner": {
-      "bg": "тёмный тил или градиент",
-      "title": "Unbounded ExtraBold",
-      "logo": "полный или знак",
-      "decor": "шестиугольник / лента / многоугольники",
-      "accent": "#8DE969"
-    },
-    "infographic_chart": {
-      "go_to": "data_visualization",
-      "bg": "белый",
-      "notes": "один цвет на ряд, без тёплых"
-    },
-    "email": {
-      "bg": "белый",
-      "title": "Unbounded",
-      "body": "Ping LCG",
-      "accent": "#8DE969 для кнопок",
-      "logo": "знак в шапке"
-    }
-  },
-  "data_visualization": {
-    "ref_brandbook_tab": "Оформление графиков и схем",
-    "principles": [
-      "фон белый #FFFFFF или #F7F7F7 (тёмный #004158 — только hero)",
-      "оси/легенды/подписи — Ping LCG ~11px #6B8A96; заголовки — Unbounded SemiBold",
-      "сетка #D4E8EE 1px, только горизонтальные линии",
-      "один цвет на ряд данных, порядок от тёмного к светлому",
-      "тёплые цвета запрещены; #D94F4F — только отрицательные значения",
-      "подписи осей и единицы обязательны; легенда вне области данных"
-    ],
-    "bar": {
-      "single": "#004158",
-      "multi": "от тёмного к светлому одной палитры, ≤3 серий в группе",
-      "radius_px": "3–4",
-      "light_bar_label": "тёмная #1A2B32",
-      "neutral_plus_accent": "нейтрал #8DC0CD/#AEC2C9 + один акцент #8DE969"
-    },
-    "line": {
-      "width_px": 2,
-      "accent_width_px": 2.5,
-      "forecast": "пунктир dash5 gap3",
-      "markers": "круг 6px, цвет линии; на тёмном — белая обводка 1.5px; только при <15 точек"
-    },
-    "pie_donut": {
-      "gap": "2px белый зазор",
-      "donut_inner": "50–60%",
-      "when": "до 6 секторов — монохром тил; 7–8 — тил+аква; >8 — горизонтальный бар",
-      "highlight": "#8DE969 или смещение 4–6px"
-    },
-    "tables": {
-      "schemes": 6,
-      "header": "задаёт тон, белый текст",
-      "semantic": {
-        "strong_growth": "#2EA866",
-        "growth": "#8DE969 / #C2F0AB",
-        "neutral": "#EAF5F8",
-        "decline": "#FFF5F5",
-        "critical": "#D94F4F + белый текст"
-      },
-      "totals": "светлый вариант цвета шапки, Ping LCG Bold, разделитель 2px"
-    },
-    "schemes_flowcharts": {
-      "blocks": {
-        "start_end": "#004158, белый текст, скруг.прямоуг/эллипс",
-        "process": "#F7F7F7, обводка #D4E8EE, текст #1A2B32, radius 6",
-        "accent": "#4F9AAB, белый",
-        "decision": "ромб #CAE7EF, обводка #4F9AAB, текст #004158",
-        "external": "#1E5C82, белый",
-        "error": "обводка #D94F4F, фон #FFF5F5, текст #B83232"
-      },
-      "links": {
-        "main": "#4F9AAB 1.5px сплошная, треугольная стрелка",
-        "secondary": "пунктир #D4E8EE",
-        "labels": "Ping LCG 11px #6B8A96"
-      },
-      "max_nesting": 3,
-      "orthogonal": true
-    }
+   ]
   }
+ },
+ "logo": {
+  "variants": [
+   {
+    "id": "full",
+    "name": "Полный логотип (знак + «data sapience»)",
+    "default": true
+   },
+   {
+    "id": "symbol",
+    "name": "Только знак (символ ds)"
+   }
+  ],
+  "forbidden_variants": [
+   "только текст без знака"
+  ],
+  "color_by_bg": {
+   "dark_bg": "белый логотип",
+   "light_bg": "тёмный логотип"
+  },
+  "clear_zone": "свободная зона = высота символа (X) со всех сторон",
+  "min_sizes": {
+   "screen_full_px": 120,
+   "screen_symbol_px": 32,
+   "favicon_px": 16,
+   "print_full_mm": 40,
+   "print_symbol_mm": 10
+  },
+  "on_slides": "Полный логотип ТОЛЬКО на обложке и финальном слайде «Контакты». На рабочих слайдах — знак в углу или без логотипа.",
+  "forbidden": [
+   "менять форму/пропорции/цвет",
+   "нефирменные цвета",
+   "тени/обводки/эффекты",
+   "поворот",
+   "фон, близкий по тону к логотипу"
+  ],
+  "layouts": {
+   "horizontal": "основной; веб-шапки, презентации, документы — по умолчанию",
+   "stacked": "квадратные/вертикальные форматы, компактный блок",
+   "side": "двухстрочный акцент; колонтитулы, баннеры",
+   "symbol": "только знак; узнаваемый контекст (аватар, фавикон, иконка приложения), min 32px"
+  },
+  "colors": {
+   "black": "на светлом/сером фоне",
+   "blue": "#004158 — фирменный, на белом фоне",
+   "white": "на тёмном/брендовом фоне"
+  },
+  "color_rule": "тёмный фон → white; светлый → black или blue (фирменный синий #004158)",
+  "files": {
+   "repo_dir": "logos/png/variants",
+   "pattern": "{layout}-{color}.png  (layout: horizontal|stacked|side|symbol; color: black|blue|white) — 12 версий",
+   "svg_source": "logos/svg (full/symbol/text · black/white)"
+  },
+  "note_for_agents": "Полный логотип (знак ds + «data sapience») брать из репо logos/png/variants/horizontal-{white,blue,black}.png. В media шаблона .pptx комбинированного лого DS НЕТ (там только текстовый вордмарк «data sapience» и логотипы продуктов) — НЕ собирать лого из текста. Текстовый логотип без знака запрещён (forbidden_variants). На тёмном — white, на светлом — blue (#004158) или black."
+ },
+ "forms_glossary": [
+  {
+   "id": "soft_glow",
+   "name": "Мягкое свечение",
+   "aka": "Blob / Glow",
+   "patterns": "01–03",
+   "use": "мягкие световые пятна, глубина и «воздух»"
+  },
+  {
+   "id": "polygon_filled",
+   "name": "Залитый многоугольник",
+   "aka": "Blob Filled",
+   "patterns": "04–06",
+   "use": "заполнение пространства, акцентные секции (тёмные фоны)"
+  },
+  {
+   "id": "polygon_outline",
+   "name": "Контурный многоугольник",
+   "aka": "Blob Outline",
+   "patterns": "07–09",
+   "use": "светлые и нейтральные фоны"
+  },
+  {
+   "id": "ribbon",
+   "name": "Лента / контурная кривая",
+   "aka": "Ribbon",
+   "patterns": "10–12",
+   "use": "обложки, ощущение движения; тонкие белые кривые на тёмных/градиентных фонах"
+  },
+  {
+   "id": "hexagon",
+   "name": "Шестиугольник",
+   "aka": "знак-мотив, контейнер",
+   "use": "иконки-контейнеры, схемы-пауки, цепочки процессов, фото-ячейки команды"
+  },
+  {
+   "id": "green_line",
+   "name": "Зелёная линия",
+   "hex": "#8DE969",
+   "use": "разделители строк/столбцов в таблицах, Gantt, схемах — на тёмных и средних фонах"
+  }
+ ],
+ "gradients": {
+  "desc": "3 фирменных градиента в рамках палитры (белый→голубой→тёмный тил)",
+  "use": "обложки, hero, баннеры, таблицы/Gantt"
+ },
+ "slides": {
+  "canvas": {
+   "ratio": "16:9",
+   "size_pt": "1057 × 595.5",
+   "size_cm": "≈37.3 × 21",
+   "orientation": "только горизонтальная",
+   "format": ".pptx",
+   "pdf_export": "Файл → Экспорт → PDF (не «Напечатать»); встраивать шрифты"
+  },
+  "backgrounds": [
+   {
+    "id": "dark_blob",
+    "name": "Тёмный Blob",
+    "base": "#004158",
+    "text": "белый",
+    "accent": "#8DE969",
+    "use": "обложки, разделители, цитаты"
+   },
+   {
+    "id": "light_blob",
+    "name": "Светлый Blob",
+    "base": "#FFFFFF",
+    "text": "#004158 / #1A2B32",
+    "use": "контентные слайды с текстом"
+   },
+   {
+    "id": "lightblue_blob",
+    "name": "Светло-голубой Blob",
+    "base": "#CAE7EF",
+    "text": "тёмный",
+    "use": "вторичные слайды, схемы"
+   },
+   {
+    "id": "dark_flat",
+    "name": "Тёмный плоский",
+    "base": "#004158",
+    "use": "плашки сравнения, фоны схем"
+   },
+   {
+    "id": "mid_blob",
+    "name": "Средний тил Blob",
+    "base": "#4F9AAB",
+    "text": "белый",
+    "use": "промежуточные слайды, разделители"
+   },
+   {
+    "id": "gradient",
+    "name": "Градиент",
+    "base": "белый→голубой→тёмный тил",
+    "use": "обложки-альтернатива, Gantt, таблицы"
+   }
+  ],
+  "background_rotation": "Не более 2 слайдов подряд на одном фоне — далее переключай (тёмный ↔ светлый). Большинство типов есть в свет/тёмн варианте с одинаковым наполнением.",
+  "types": [
+   {
+    "n": 1,
+    "name": "Обложка",
+    "layout": "Заголовок 1, Заголовок 2",
+    "bg_variants": [
+     "тёмный",
+     "светлый"
+    ],
+    "demo_slides": "1–2"
+   },
+   {
+    "n": 2,
+    "name": "Оглавление",
+    "layout": "Оглавление 1–4",
+    "bg_variants": [
+     "светлый",
+     "тёмный"
+    ],
+    "demo_slides": "3–6"
+   },
+   {
+    "n": 3,
+    "name": "Заголовок раздела",
+    "layout": "Заголовок раздела",
+    "bg_variants": [
+     "светлый",
+     "градиент"
+    ],
+    "demo_slides": "7"
+   },
+   {
+    "n": 4,
+    "name": "Револьвер (схема-паук)",
+    "layout": "Револьвер 1–2",
+    "bg_variants": [
+     "светлый",
+     "тёмный"
+    ],
+    "demo_slides": "8–9"
+   },
+   {
+    "n": 5,
+    "name": "Таблица",
+    "layout": "Таблица 1–2",
+    "bg_variants": [
+     "градиент",
+     "светлый"
+    ],
+    "demo_slides": "10–11"
+   },
+   {
+    "n": 6,
+    "name": "Сравнение «тиски»",
+    "layout": "Сравнение (тиски) 1–3",
+    "bg_variants": [
+     "светлый+тёмный"
+    ],
+    "demo_slides": "12–14"
+   },
+   {
+    "n": 7,
+    "name": "Одна мысль",
+    "layout": "Одна мысль",
+    "bg_variants": [
+     "тёмный",
+     "светлый"
+    ],
+    "demo_slides": "15"
+   },
+   {
+    "n": 8,
+    "name": "Буллиты",
+    "layout": "Буллиты 2/3/4/6/8 (светлые/тёмные)",
+    "bg_variants": [
+     "светлый",
+     "тёмный"
+    ],
+    "demo_slides": "16–25"
+   },
+   {
+    "n": 9,
+    "name": "Картинки и графики",
+    "layout": "Картинки и графики 1–4",
+    "bg_variants": [
+     "разные"
+    ],
+    "demo_slides": "26–29"
+   },
+   {
+    "n": 10,
+    "name": "Роадмап / Gantt",
+    "layout": "Роадмап 1–4",
+    "bg_variants": [
+     "градиент"
+    ],
+    "demo_slides": "30–33"
+   },
+   {
+    "n": 11,
+    "name": "Процесс / цепочка",
+    "layout": "Процесс 1–4",
+    "bg_variants": [
+     "тёмный",
+     "светлый"
+    ],
+    "demo_slides": "34–37"
+   },
+   {
+    "n": 12,
+    "name": "Команда",
+    "layout": "Команда 1–2",
+    "bg_variants": [
+     "светлый",
+     "тёмный"
+    ],
+    "demo_slides": "38–39"
+   },
+   {
+    "n": 13,
+    "name": "Продукты",
+    "layout": "Продукты 1–6",
+    "bg_variants": [
+     "тёмный+средний"
+    ],
+    "demo_slides": "40–45"
+   },
+   {
+    "n": 14,
+    "name": "Контакты (финал)",
+    "layout": "Контакты, 1_Контакты",
+    "bg_variants": [
+     "тёмный",
+     "светлый"
+    ],
+    "demo_slides": "46–47"
+   },
+   {
+    "n": 0,
+    "name": "Пустой",
+    "layout": "Пустой",
+    "bg_variants": [
+     "любой"
+    ],
+    "demo_slides": "48+"
+   }
+  ],
+  "assembly_steps": [
+   "1. Выбрать тип и фон из шаблона (не создавать фон вручную).",
+   "2. Добавить декор и логотип (логотип — только на обложке/контактах; декор не масштабировать; поля 5–8%).",
+   "3. Разместить контент фирменными шрифтами, не выходя за поля."
+  ],
+  "agent_workflow": {
+   "principle": "Всегда от шаблона assets.template, никогда с пустого документа.",
+   "scenario_A_from_template": [
+    "open Presentation('Data Sapience template.pptx')",
+    "тип → slide_layout по layout_to_type",
+    "slides.add_slide(layout); заполнить плейсхолдеры",
+    "не переопределять шрифты/цвета вручную; не воссоздавать фигуры",
+    "python-pptx плохо дублирует готовые слайды — использовать макеты"
+   ],
+   "scenario_B_redraw_from_scratch": [
+    "когда нетиповой слайд / нет макета",
+    "строить с нуля, но все токены брать из этого манифеста (colors, typography, forms_glossary, slides.icons, slides.images)",
+    "итог проверить по slides.checklist; быть неотличимым от собранного из шаблона"
+   ]
+  },
+  "icons": {
+   "set": "единый линейный набор из шаблона",
+   "style": "одинаковая толщина обводки, скруглённые концы, без заливки",
+   "color_variants": [
+    {
+     "bg": "светлый",
+     "color": "#004158"
+    },
+    {
+     "bg": "тёмный",
+     "color": "#8DE969 или #CAE7EF"
+    }
+   ],
+   "container": "шестиугольник-контейнер",
+   "forbidden": [
+    "сторонние наборы (Material, Font Awesome) и эмодзи",
+    "растягивать/искажать",
+    "заливать",
+    "тени/объём/градиенты",
+    "нефирменные цвета"
+   ]
+  },
+  "images": {
+   "principle": "Собственная графика, а не сток-фото",
+   "brand_elements": [
+    "3D-кольцо/орбита",
+    "объёмный шестиугольник",
+    "многоугольники"
+   ],
+   "photo_treatment": [
+    "дуотон фирменного тила (тени #004158 → света #CAE7EF) или тинт #004158",
+    "скругление ~8px или маска фирменной формой",
+    "скриншоты — рамка #D4E8EE 1px на белой подложке"
+   ],
+   "forbidden": [
+    "пёстрые сток-фото в тёплых тонах",
+    "фото без обработки",
+    "искажение пропорций"
+   ],
+   "charts_ref": "диаграммы/таблицы/схемы — по вкладке «Оформление графиков и схем» брендбука"
+  },
+  "checklist": [
+   "слайд из шаблона",
+   "16:9 горизонтальный",
+   "мастер не изменён",
+   "логотип на обложке+контактах",
+   "шрифты Unbounded/Ping LCG, без системных",
+   "≤3 уровней текста, ≤6–7 буллетов, ≥12pt",
+   "только палитра DS (+расширенная точечно)",
+   "нет тёплых цветов",
+   "зелёный — только акцент",
+   "поля 5–8%",
+   "декор в угловых/краевых зонах",
+   "один тип фона на смысловой блок",
+   "шрифты внедрены при экспорте"
+  ],
+  "layout_to_type": {
+   "Заголовок 1": "Обложка",
+   "Заголовок 2": "Обложка",
+   "Оглавление 1": "Оглавление",
+   "Оглавление 2": "Оглавление",
+   "Оглавление 3": "Оглавление",
+   "Оглавление 4": "Оглавление",
+   "Заголовок раздела": "Заголовок раздела",
+   "Револьвер 1": "Револьвер (схема-паук)",
+   "Револьвер 2": "Револьвер (схема-паук)",
+   "Таблица 1": "Таблица",
+   "Таблица 2": "Таблица",
+   "Сравнение (тиски) 1": "Сравнение «тиски»",
+   "Сравнение (тиски) 2": "Сравнение «тиски»",
+   "Сравнение (тиски) 3": "Сравнение «тиски»",
+   "Одна мысль": "Одна мысль",
+   "Буллиты 2/3/4/6/8 (светлые/тёмные)": "Буллиты",
+   "Картинки и графики 1-4": "Картинки и графики",
+   "Роадмап 1-4": "Роадмап / Gantt",
+   "Процесс 1-4": "Процесс / цепочка",
+   "Команда 1-2": "Команда",
+   "Продукты 1-6": "Продукты",
+   "Контакты": "Контакты (финал)",
+   "1_Контакты": "Контакты (финал)",
+   "Пустой": "Произвольная компоновка (иконки/лого-листы)"
+  },
+  "background_decor": {
+   "what": "полупрозрачные скруглённые 7–8-угольники (блобы) со свечением — фирменный приём заполнения пространства и глубины",
+   "placement": "по краям и углам, ЧАСТИЧНО за пределами слайда; за текстом или рядом",
+   "intensity": "полупрозрачные (~0.4–0.55); форма ДОЛЖНА читаться — мягкие края, но НЕ сплошное размытие в пятно; не перекрывать читаемость текста (центр держать чище/темнее под текст)",
+   "colors": "тёмный/градиентный фон → светло-голубые #CAE7EF / мид #4F9AAB; светлый фон → #CAE7EF; не перекрашивать в нефирменные цвета",
+   "source": "брать из шаблона; при отрисовке с нуля — путь шестиугольника из <a:custGeom> demo-слайда (slide23.xml, бокс 1106805²), заливка линейным градиентом #E2F2F8→#9DC6D6, лёгкое размытие (blur ≈16–24px на полотне 1920px), opacity ~0.4–0.55"
+  },
+  "render_mode_b": {
+   "when": "нетиповой слайд или отрисовка с нуля по стилю (HTML→PNG→.pptx, либо SVG)",
+   "fonts": "ВСТРАИВАТЬ шрифты через @font-face data:font/ttf;base64 — НЕ полагаться на системный fontconfig (Chromium берёт fallback → неверное начертание). Unbounded (variable 200–900) + Ping LCG (300/400/500/700); кириллица есть в обоих.",
+   "logo": "полный — из репо variants/horizontal-*; только знак — variants/symbol-*",
+   "shapes": "фирменный шестиугольник из custGeom demo-слайда; декоративные блобы — см. slides.background_decor",
+   "backgrounds": "реальные градиенты gradient/png/talys_gradient-0X + паттерны pattern/png/talys_pattern-0X",
+   "assembly": "python-pptx, слайд 12192000×6858000 EMU (16:9), пустой layout, add_picture(0,0, full-bleed) → шрифты «запечены», PowerPoint-фолбэка шрифтов нет"
+  }
+ },
+ "rules_global": {
+  "do": [
+   "использовать готовые токены и ассеты",
+   "комбинировать по правилам разделов",
+   "сокращать тексты, сохраняя смысл"
+  ],
+  "forbidden": [
+   "менять логотип",
+   "нефирменные цвета/шрифты/иконки",
+   "тёплые цвета",
+   "перекрашивать паттерны",
+   "менять по смыслу описания продуктов"
+  ]
+ },
+ "products": {
+  "company": {
+   "name": "Data Sapience",
+   "summary": "Российский вендор, разработчик ИТ-решений для бизнеса. Входит в группу компаний GlowByte. Команда с 20-летним опытом. Все продукты — в Реестре отечественного ПО.",
+   "note_facts": "Развёртывание (облако/on-prem/гибрид) и подход к сборке исходников (open source) — только в общей справке «О компании», НЕ в описаниях отдельных продуктов."
+  },
+  "naming": {
+   "correct": [
+    "Kolmogorov AI",
+    "TALYS Ocean",
+    "DOG EMM",
+    "DOG DQ"
+   ],
+   "sub_dotted": [
+    "TALYS.SDE",
+    "TALYS.AML"
+   ]
+  },
+  "lines": [
+   {
+    "name": "CM Ocean",
+    "desc": "платформа CVM-маркетинга",
+    "sub": [
+     {
+      "name": "CM Ocean Audience",
+      "desc": "управление маркетинговыми данными"
+     },
+     {
+      "name": "CM Ocean BatchFlow",
+      "desc": "offline-маркетинг"
+     },
+     {
+      "name": "CM Ocean Real-time Flow",
+      "desc": "online-маркетинг"
+     },
+     {
+      "name": "CM Ocean Template",
+      "desc": "библиотека шаблонов коммуникаций"
+     },
+     {
+      "name": "CM Ocean Policy",
+      "desc": "контактная и продуктовая политики"
+     },
+     {
+      "name": "CM Ocean Communication",
+      "desc": "коммуникационный хаб"
+     },
+     {
+      "name": "CM Ocean Optimum",
+      "desc": "оптимизация маркетинговых предложений"
+     },
+     {
+      "name": "CM Ocean Offer",
+      "desc": "каталог маркетинговых предложений"
+     },
+     {
+      "name": "CM Ocean Control",
+      "desc": "управление жизненным циклом кампаний"
+     },
+     {
+      "name": "CM Ocean Digital",
+      "desc": "сбор данных и персонализация цифровых каналов"
+     }
+    ]
+   },
+   {
+    "name": "TALYS Ocean",
+    "desc": "платформа интегрированного управления рисками",
+    "sub": [
+     {
+      "name": "TALYS.SDE",
+      "desc": "онлайн-движок для принятия решений по кредитным и другим видам рисков и антифроду в реальном времени"
+     },
+     {
+      "name": "TALYS.AML",
+      "desc": "финансовый мониторинг: ПОД/ФТ и комплаенс (115-ФЗ, FATCA/CRS, санкции)"
+     },
+     {
+      "name": "TALYS.OpRisk",
+      "desc": "управление операционными рисками"
+     },
+     {
+      "name": "TALYS.Motor",
+      "desc": "сегментация ОСАГО"
+     }
+    ]
+   },
+   {
+    "name": "Kolmogorov AI",
+    "desc": "платформа аналитики данных, машинного обучения и LLM/MLOps",
+    "sub": [
+     {
+      "name": "Kolmogorov Continuity",
+      "desc": "управление жизненным циклом моделей и аналитических проектов (Decision Ops)"
+     },
+     {
+      "name": "Kolmogorov Axiom",
+      "desc": "Feature Store с low-code конструктором датасетов"
+     },
+     {
+      "name": "Kolmogorov Continuity-LLM",
+      "desc": "создание, тестирование и безопасный деплой AI-агентов"
+     },
+     {
+      "name": "Kolmogorov ABacus",
+      "desc": "фреймворк для A/B-тестирования"
+     },
+     {
+      "name": "Kolmogorov Predicate",
+      "desc": "мониторинг качества аналитических продуктов"
+     },
+     {
+      "name": "Kolmogorov Continuity-A2P",
+      "desc": "работа с моделями"
+     }
+    ]
+   },
+   {
+    "name": "Data Ocean Governance",
+    "desc": "платформа управления данными организации",
+    "sub": [
+     {
+      "name": "DOG EMM",
+      "desc": "управление метаданными: каталог данных и бизнес-глоссарий, взгляд 360°"
+     },
+     {
+      "name": "DOG DQ",
+      "desc": "управление качеством данных: дата-контракты и инциденты"
+     },
+     {
+      "name": "DOG MDM",
+      "desc": "управление мастер-данными: очистка, обогащение, стандартизация, дедубликация"
+     },
+     {
+      "name": "Ingresso One",
+      "desc": "организация и автоматизация работы со справочными (НСИ) и пользовательскими данными"
+     }
+    ]
+   },
+   {
+    "name": "Data Ocean",
+    "desc": "платформа данных",
+    "branding_note": "Отдельный самостоятельный фирменный стиль (dataplatform.ru). В составе материалов Data Sapience («в комплекте») продукты используют логотипы, перекрашенные в палитру DS + белые версии — есть в брендбуке (раздел Data Ocean) и в assets logos/products/png/data-ocean (Nova, Cluster Manager, SDI).",
+    "sub": [
+     {
+      "name": "Data Ocean Nova",
+      "desc": "универсальная Lakehouse-платформа данных"
+     },
+     {
+      "name": "Data Ocean Cluster Manager",
+      "desc": "администрирование кластеров и анализ запросов"
+     },
+     {
+      "name": "Data Ocean SDI",
+      "desc": "low-code потоковая обработка и репликация данных"
+     }
+    ]
+   }
+  ],
+  "excluded": [
+   {
+    "name": "TALYS.Antifraud",
+    "reason": "в источнике помечен «пока не трогаем»"
+   }
+  ],
+  "logos": {
+   "source_of_truth": "Брендбук (HTML, секции продуктов) — НЕ только репо. В репо logos/products/png возможны устаревшие/несоответствующие версии: на 2026-06-17 cm-ocean.png был в ИСХОДНЫХ сине-зелёных цветах (#00FFAE→#0085EC), что ЗАПРЕЩЕНО.",
+   "cm_ocean": "только тиловая версия (#CAE7EF→#004158); исходные сине-зелёные цвета запрещены",
+   "kolmogorov": "единый цветной логотип везде; отдельного монохрома нет",
+   "talys": "TALYS ocean — тёмный знак+текст на светлом; на тёмном — светлый",
+   "data_ocean_line": "отдельного логотипа линейки «Data Ocean» нет — линейка представляется логотипом Data Ocean Nova в палитре DS (logos/products/png/data-ocean/nova-brand.png)",
+   "governance": "логотип Data Ocean Governance = ТОЛЬКО знак (без вордмарка) → название подписывать отдельно шрифтом Unbounded",
+   "files": "logos/products/png/{cm-ocean,kolmogorov,talys,data-ocean-governance}.png + data-ocean/{nova,cluster-manager,data-ocean-sdi}-{brand,white}.png"
+  }
+ },
+ "assets": {
+  "repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
+  "logos": "logos/svg (full/symbol/text · black/white) · logos/png/variants (12 PNG: horizontal/stacked/side/symbol × black/blue/white) · logos/products (исходники + png + png/data-ocean)",
+  "fonts": "fonts/Unbounded.zip, fonts/PingLCG.zip",
+  "template": "templates/Data-Sapience-template.pptx",
+  "template_layouts": [
+   "Заголовок 1/2",
+   "Оглавление 1–4",
+   "Заголовок раздела",
+   "Револьвер 1–2",
+   "Таблица 1–2",
+   "Сравнение (тиски) 1–3",
+   "Одна мысль",
+   "Буллиты 2/3/4/6/8 свет/тёмн",
+   "Картинки и графики 1–4",
+   "Роадмап 1–4",
+   "Процесс 1–4",
+   "Команда 1–2",
+   "Продукты 1–6",
+   "Контакты / 1_Контакты",
+   "Пустой"
+  ],
+  "icons": "icons/ — icons-dark-on-light.jpg, icons-green-on-dark.jpg (превью) + icons-png-800.zip (340 линейных иконок PNG)",
+  "patterns": "patterns/{png,eps,ai} — talys_pattern-01..12 (Blob/Glow 01–03, Blob Filled 04–06, Blob Outline 07–09, Ribbon 10–12)",
+  "gradients": "gradients/{png,eps,ai} — talys_gradient-01..03",
+  "graphics": "graphics/ring.png, symbol-3d.png, hexagon-3d.png (фирменные 3D-элементы)",
+  "missing": "Полный самостоятельный фирменный стиль Data Ocean — внешний (dataplatform.ru); в брендбуке/репо — только DS-перекрашенные («комплектные») версии логотипов Data Ocean."
+ },
+ "entrypoint": {
+  "step1": "Загрузи весь JSON в контекст (он маленький).",
+  "step2": "Прочитай $schema_note и how_agent_should_use.",
+  "step3": "Определи тип задачи и возьми список ключей из routing.",
+  "step4": "Собери материал, используя ТОЛЬКО токены/правила из этих ключей; бинарные ассеты бери из assets (репо).",
+  "step5": "Проверь: rules_global.forbidden; слайды — slides.checklist; графики/схемы — data_visualization; тексты — products."
+ },
+ "routing": {
+  "presentation_slide": [
+   "slides",
+   "colors",
+   "typography",
+   "forms_glossary",
+   "logo",
+   "assets"
+  ],
+  "document_pdf_docx": [
+   "typography",
+   "colors",
+   "logo",
+   "layout",
+   "rules_global",
+   "assets"
+  ],
+  "web_page_or_landing": [
+   "colors",
+   "typography",
+   "gradients",
+   "forms_glossary",
+   "logo",
+   "layout",
+   "assets"
+  ],
+  "social_or_banner": [
+   "colors",
+   "typography",
+   "gradients",
+   "forms_glossary",
+   "logo",
+   "slides.icons",
+   "assets"
+  ],
+  "chart_or_infographic": [
+   "data_visualization",
+   "colors",
+   "typography",
+   "assets"
+  ],
+  "diagram_or_flowchart": [
+   "data_visualization",
+   "colors",
+   "typography",
+   "forms_glossary"
+  ],
+  "icon_usage": [
+   "slides.icons",
+   "colors",
+   "assets"
+  ],
+  "copywriting": [
+   "products",
+   "meta.master_texts"
+  ],
+  "get_assets": [
+   "assets"
+  ],
+  "any_other_material": [
+   "colors",
+   "typography",
+   "logo",
+   "forms_glossary",
+   "layout",
+   "rules_global",
+   "assets"
+  ]
+ },
+ "layout": {
+  "grid_base_px": 8,
+  "spacing_scale_px": [
+   4,
+   8,
+   16,
+   24,
+   32,
+   48,
+   64
+  ],
+  "radius_px": {
+   "small": 4,
+   "medium": 8,
+   "large": 12,
+   "pill": 999
+  },
+  "content_max_width_px": 900,
+  "margins": {
+   "slides": "5–8% от ширины слайда",
+   "documents": "≥18–20 мм",
+   "web": "контент ≤ 900–1100px, адаптивные поля"
+  },
+  "shadows": {
+   "scale": [
+    "xs",
+    "sm",
+    "md",
+    "lg"
+   ],
+   "tone": "тил-тонированные (эффект lifted, не carved)",
+   "use": "точечно, для разделения слоёв"
+  },
+  "dividers": "#D4E8EE 1px"
+ },
+ "materials": {
+  "presentation": {
+   "go_to": "slides",
+   "notes": "всегда от шаблона assets.template; 6 фонов; чередовать фоны"
+  },
+  "document_pdf_docx": {
+   "bg": "белый или #F7F7F7",
+   "title": "Unbounded",
+   "body": "Ping LCG",
+   "logo": "полный на титуле, знак в колонтитуле",
+   "palette": "основная DS"
+  },
+  "web_landing": {
+   "bg": "белый или тёмный тил (#004158) для hero",
+   "decor": "градиенты + многоугольники/мягкое свечение в hero",
+   "accent": "#8DE969 для CTA",
+   "icons": "линейный набор (assets.icons)",
+   "notes": "colors — как CSS-переменные"
+  },
+  "social_banner": {
+   "bg": "тёмный тил или градиент",
+   "title": "Unbounded ExtraBold",
+   "logo": "полный или знак",
+   "decor": "шестиугольник / лента / многоугольники",
+   "accent": "#8DE969"
+  },
+  "infographic_chart": {
+   "go_to": "data_visualization",
+   "bg": "белый",
+   "notes": "один цвет на ряд, без тёплых"
+  },
+  "email": {
+   "bg": "белый",
+   "title": "Unbounded",
+   "body": "Ping LCG",
+   "accent": "#8DE969 для кнопок",
+   "logo": "знак в шапке"
+  }
+ },
+ "data_visualization": {
+  "ref_brandbook_tab": "Оформление графиков и схем",
+  "principles": [
+   "фон белый #FFFFFF или #F7F7F7 (тёмный #004158 — только hero)",
+   "оси/легенды/подписи — Ping LCG ~11px #6B8A96; заголовки — Unbounded SemiBold",
+   "сетка #D4E8EE 1px, только горизонтальные линии",
+   "один цвет на ряд данных, порядок от тёмного к светлому",
+   "тёплые цвета запрещены; #D94F4F — только отрицательные значения",
+   "подписи осей и единицы обязательны; легенда вне области данных"
+  ],
+  "bar": {
+   "single": "#004158",
+   "multi": "от тёмного к светлому одной палитры, ≤3 серий в группе",
+   "radius_px": "3–4",
+   "light_bar_label": "тёмная #1A2B32",
+   "neutral_plus_accent": "нейтрал #8DC0CD/#AEC2C9 + один акцент #8DE969"
+  },
+  "line": {
+   "width_px": 2,
+   "accent_width_px": 2.5,
+   "forecast": "пунктир dash5 gap3",
+   "markers": "круг 6px, цвет линии; на тёмном — белая обводка 1.5px; только при <15 точек"
+  },
+  "pie_donut": {
+   "gap": "2px белый зазор",
+   "donut_inner": "50–60%",
+   "when": "до 6 секторов — монохром тил; 7–8 — тил+аква; >8 — горизонтальный бар",
+   "highlight": "#8DE969 или смещение 4–6px"
+  },
+  "tables": {
+   "schemes": 6,
+   "header": "задаёт тон, белый текст",
+   "semantic": {
+    "strong_growth": "#2EA866",
+    "growth": "#8DE969 / #C2F0AB",
+    "neutral": "#EAF5F8",
+    "decline": "#FFF5F5",
+    "critical": "#D94F4F + белый текст"
+   },
+   "totals": "светлый вариант цвета шапки, Ping LCG Bold, разделитель 2px"
+  },
+  "schemes_flowcharts": {
+   "blocks": {
+    "start_end": "#004158, белый текст, скруг.прямоуг/эллипс",
+    "process": "#F7F7F7, обводка #D4E8EE, текст #1A2B32, radius 6",
+    "accent": "#4F9AAB, белый",
+    "decision": "ромб #CAE7EF, обводка #4F9AAB, текст #004158",
+    "external": "#1E5C82, белый",
+    "error": "обводка #D94F4F, фон #FFF5F5, текст #B83232"
+   },
+   "links": {
+    "main": "#4F9AAB 1.5px сплошная, треугольная стрелка",
+    "secondary": "пунктир #D4E8EE",
+    "labels": "Ping LCG 11px #6B8A96"
+   },
+   "max_nesting": 3,
+   "orthogonal": true
+  }
+ }
 }
