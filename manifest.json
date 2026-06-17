@@ -2,7 +2,7 @@
   "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
   "meta": {
     "brand": "Data Sapience",
-    "version": "1.1",
+    "version": "1.2",
     "updated": "2026-06-17",
     "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
     "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
@@ -726,7 +726,7 @@
       {
         "name": "Data Ocean",
         "desc": "платформа данных",
-        "branding_note": "Отдельное брендирование, отдельный документ — dataplatform.ru",
+        "branding_note": "Отдельный самостоятельный фирменный стиль (dataplatform.ru). В составе материалов Data Sapience («в комплекте») продукты используют логотипы, перекрашенные в палитру DS + белые версии — есть в брендбуке (раздел Data Ocean) и в assets logos/products/png/data-ocean (Nova, Cluster Manager, SDI).",
         "sub": [
           {
             "name": "Data Ocean Nova",
@@ -756,7 +756,7 @@
   },
   "assets": {
     "repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
-    "logos": "logos/svg (full/symbol/text · black/white), logos/png, logos/products (исходники: svg/ai/zip) + logos/products/png (готовые превью: cm-ocean, kolmogorov, talys, data-ocean-governance)",
+    "logos": "logos/svg (full/symbol/text · black/white), logos/png, logos/products (исходники: svg/ai/zip) + logos/products/png (готовые превью: cm-ocean, kolmogorov, talys, data-ocean-governance) + logos/products/png/data-ocean (Nova, Cluster Manager, SDI — брендовый + белый, перекрашены в палитру DS)",
     "fonts": "fonts/Unbounded.zip, fonts/PingLCG.zip",
     "template": "templates/Data-Sapience-template.pptx",
     "template_layouts": [
@@ -780,7 +780,7 @@
     "patterns": "patterns/{png,eps,ai} — talys_pattern-01..12 (Blob/Glow 01–03, Blob Filled 04–06, Blob Outline 07–09, Ribbon 10–12)",
     "gradients": "gradients/{png,eps,ai} — talys_gradient-01..03",
     "graphics": "graphics/ring.png, symbol-3d.png, hexagon-3d.png (фирменные 3D-элементы)",
-    "missing": "Нет в репо: логотип линейки Data Ocean (другой брендинг → dataplatform.ru)."
+    "missing": "Полный самостоятельный фирменный стиль Data Ocean — внешний (dataplatform.ru); в брендбуке/репо — только DS-перекрашенные («комплектные») версии логотипов Data Ocean."
   },
   "entrypoint": {
     "step1": "Загрузи весь JSON в контекст (он маленький).",
