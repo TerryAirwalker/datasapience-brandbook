@@ -2,7 +2,7 @@
   "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
   "meta": {
     "brand": "Data Sapience",
-    "version": "1.4",
+    "version": "1.5",
     "updated": "2026-06-17",
     "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
     "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
@@ -246,7 +246,24 @@
       "тени/обводки/эффекты",
       "поворот",
       "фон, близкий по тону к логотипу"
-    ]
+    ],
+    "layouts": {
+      "horizontal": "основной; веб-шапки, презентации, документы — по умолчанию",
+      "stacked": "квадратные/вертикальные форматы, компактный блок",
+      "side": "двухстрочный акцент; колонтитулы, баннеры",
+      "symbol": "только знак; узнаваемый контекст (аватар, фавикон, иконка приложения), min 32px"
+    },
+    "colors": {
+      "black": "на светлом/сером фоне",
+      "blue": "#004158 — фирменный, на белом фоне",
+      "white": "на тёмном/брендовом фоне"
+    },
+    "color_rule": "тёмный фон → white; светлый → black или blue (фирменный синий #004158)",
+    "files": {
+      "repo_dir": "logos/png/variants",
+      "pattern": "{layout}-{color}.png  (layout: horizontal|stacked|side|symbol; color: black|blue|white) — 12 версий",
+      "svg_source": "logos/svg (full/symbol/text · black/white)"
+    }
   },
   "forms_glossary": [
     {
@@ -753,7 +770,7 @@
   },
   "assets": {
     "repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
-    "logos": "logos/svg (full/symbol/text · black/white), logos/png, logos/products (исходники: svg/ai/zip) + logos/products/png (готовые превью: cm-ocean, kolmogorov, talys, data-ocean-governance) + logos/products/png/data-ocean (Nova, Cluster Manager, SDI — брендовый + белый, перекрашены в палитру DS)",
+    "logos": "logos/svg (full/symbol/text · black/white) · logos/png/variants (12 PNG: horizontal/stacked/side/symbol × black/blue/white) · logos/products (исходники + png + png/data-ocean)",
     "fonts": "fonts/Unbounded.zip, fonts/PingLCG.zip",
     "template": "templates/Data-Sapience-template.pptx",
     "template_layouts": [
