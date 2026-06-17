@@ -2,8 +2,8 @@
   "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
   "meta": {
     "brand": "Data Sapience",
-    "version": "1.0",
-    "updated": "2026-06",
+    "version": "1.1",
+    "updated": "2026-06-17",
     "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
     "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
     "master_texts": "https://docs.google.com/spreadsheets/d/1Dh4XPZVN5zseNpFHAjo1CmUsN146kSWm_G6whpzjTIU/edit?gid=1210120956",
@@ -756,7 +756,7 @@
   },
   "assets": {
     "repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
-    "logos": "logos/svg (full/symbol/text, black/white), logos/png, logos/products",
+    "logos": "logos/svg (full/symbol/text · black/white), logos/png, logos/products (исходники: svg/ai/zip) + logos/products/png (готовые превью: cm-ocean, kolmogorov, talys, data-ocean-governance)",
     "fonts": "fonts/Unbounded.zip, fonts/PingLCG.zip",
     "template": "templates/Data-Sapience-template.pptx",
     "template_layouts": [
@@ -776,11 +776,11 @@
       "Контакты / 1_Контакты",
       "Пустой"
     ],
-    "icons": "icons/ — icons-dark-on-light.jpg, icons-green-on-dark.jpg (превью библиотеки), icons-png-800.zip (340 линейных иконок PNG)",
-    "patterns": "patterns/pattern-01..12.png (Blob/Glow 01–03, Blob Filled 04–06, Blob Outline 07–09, Ribbon 10–12)",
-    "gradients": "gradients/gradient-01..03.png",
+    "icons": "icons/ — icons-dark-on-light.jpg, icons-green-on-dark.jpg (превью) + icons-png-800.zip (340 линейных иконок PNG)",
+    "patterns": "patterns/{png,eps,ai} — talys_pattern-01..12 (Blob/Glow 01–03, Blob Filled 04–06, Blob Outline 07–09, Ribbon 10–12)",
+    "gradients": "gradients/{png,eps,ai} — talys_gradient-01..03",
     "graphics": "graphics/ring.png, symbol-3d.png, hexagon-3d.png (фирменные 3D-элементы)",
-    "missing": "Нет в репо: логотип линейки Data Ocean (другой брендинг → dataplatform.ru); векторные исходники (AI/EPS) паттернов и градиентов (есть только PNG)."
+    "missing": "Нет в репо: логотип линейки Data Ocean (другой брендинг → dataplatform.ru)."
   },
   "entrypoint": {
     "step1": "Загрузи весь JSON в контекст (он маленький).",
