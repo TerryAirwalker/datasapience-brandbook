@@ -2,7 +2,7 @@
   "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
   "meta": {
     "brand": "Data Sapience",
-    "version": "2.8",
+    "version": "2.9",
     "updated": "2026-06-18",
     "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
     "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
