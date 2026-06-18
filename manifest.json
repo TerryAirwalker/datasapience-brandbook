@@ -2,7 +2,7 @@
  "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
  "meta": {
   "brand": "Data Sapience",
-  "version": "1.9",
+  "version": "2.0",
   "updated": "2026-06-17",
   "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
   "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
@@ -329,40 +329,46 @@
     "base": "#004158",
     "text": "белый",
     "accent": "#8DE969",
-    "use": "обложки, разделители, цитаты"
+    "use": "обложки, разделители, цитаты",
+    "decor": "2–3 мягких блоба #4F9AAB по углам (+зелёные акценты)"
    },
    {
     "id": "light_blob",
     "name": "Светлый Blob",
     "base": "#FFFFFF",
     "text": "#004158 / #1A2B32",
-    "use": "контентные слайды с текстом"
+    "use": "контентные слайды с текстом",
+    "decor": "2–3 блоба #CAE7EF по углам + полигональная (контурная) текстура"
    },
    {
     "id": "lightblue_blob",
     "name": "Светло-голубой Blob",
     "base": "#CAE7EF",
     "text": "тёмный",
-    "use": "вторичные слайды, схемы"
+    "use": "вторичные слайды, схемы",
+    "decor": "белые блобы по углам"
    },
    {
     "id": "dark_flat",
     "name": "Тёмный плоский",
     "base": "#004158",
-    "use": "плашки сравнения, фоны схем"
+    "use": "плашки сравнения, фоны схем",
+    "decor": "без украшений (максимальный контраст)"
    },
    {
     "id": "mid_blob",
     "name": "Средний тил Blob",
     "base": "#4F9AAB",
     "text": "белый",
-    "use": "промежуточные слайды, разделители"
+    "use": "промежуточные слайды, разделители",
+    "decor": "светло-голубые блобы #CAE7EF по углам"
    },
    {
     "id": "gradient",
     "name": "Градиент",
     "base": "белый→голубой→тёмный тил",
-    "use": "обложки-альтернатива, Gantt, таблицы"
+    "use": "обложки-альтернатива, Gantt, таблицы",
+    "decor": "градиент белый→голубой→тёмный тил; диагональ (обложки) / вертикаль (таблицы, Gantt); + контурные кривые (лента)"
    }
   ],
   "background_rotation": "Не более 2 слайдов подряд на одном фоне — далее переключай (тёмный ↔ светлый). Большинство типов есть в свет/тёмн варианте с одинаковым наполнением.",
@@ -633,7 +639,14 @@
    "backgrounds": "реальные градиенты gradient/png/talys_gradient-0X + паттерны pattern/png/talys_pattern-0X",
    "assembly": "python-pptx, слайд 12192000×6858000 EMU (16:9), пустой layout, add_picture(0,0, full-bleed) → шрифты «запечены», PowerPoint-фолбэка шрифтов нет"
   },
-  "font_sizes_reminder": "Размеры шрифтов на слайдах — строго по typography.on_slides.roles: заголовок обложки 36–48pt, заголовок слайда 24–32pt, подзаголовок 16–20pt, текст 14–16pt, подписи 11–12pt. НЕ увеличивать сверх нормы (частая ошибка)."
+  "font_sizes_reminder": "Размеры шрифтов на слайдах — строго по typography.on_slides.roles: заголовок обложки 36–48pt, заголовок слайда 24–32pt, подзаголовок 16–20pt, текст 14–16pt, подписи 11–12pt. НЕ увеличивать сверх нормы (частая ошибка).",
+  "backgrounds_files": {
+   "repo_dir": "backgrounds/ (assets repo)",
+   "ready": "dark-cover.png (обложка: тёмный/градиент + 3 блоба, из открывающего слайда шаблона), light-content.png (контентный слайд: Светлый Blob)",
+   "type_previews": "backgrounds/types/ — 6 превью типов из раздела 02 брендбука (01-lightblue-blob, 02-mid-blob, 03-dark-blob, 04-gradient, 05-light-blob) + decor-hexagons, decor-green-lines",
+   "slide_type_to_bg": "обложка/разделитель/контакты → dark_blob или gradient; контентный слайд с текстом/карточками → light_blob (белый + блобы #CAE7EF + полигональная текстура); вторичный/схемы → lightblue_blob; сравнение/максимальный контраст → dark_flat; промежуточный → mid_blob",
+   "build_note": "фоны компонуются из реальных ассетов: gradient/png + pattern/png (блобы 01–12) + graphics/hexagon.svg; 2–3 крупных блоба по углам, не выдумывать россыпь мелких"
+  }
  },
  "rules_global": {
   "do": [
@@ -852,7 +865,8 @@
   "patterns": "patterns/{png,eps,ai} — talys_pattern-01..12 (Blob/Glow 01–03, Blob Filled 04–06, Blob Outline 07–09, Ribbon 10–12)",
   "gradients": "gradients/{png,eps,ai} — talys_gradient-01..03",
   "graphics": "graphics/ring.png, symbol-3d.png, hexagon-3d.png (фирменные 3D-элементы)",
-  "missing": "Полный самостоятельный фирменный стиль Data Ocean — внешний (dataplatform.ru); в брендбуке/репо — только DS-перекрашенные («комплектные») версии логотипов Data Ocean."
+  "missing": "Полный самостоятельный фирменный стиль Data Ocean — внешний (dataplatform.ru); в брендбуке/репо — только DS-перекрашенные («комплектные») версии логотипов Data Ocean.",
+  "backgrounds": "backgrounds/ — готовые фоны (dark-cover.png, light-content.png) + types/ (6 превью типов из раздела 02). Блоки для сборки: patterns/, gradients/, graphics/hexagon.svg"
  },
  "entrypoint": {
   "step1": "Загрузи весь JSON в контекст (он маленький).",
