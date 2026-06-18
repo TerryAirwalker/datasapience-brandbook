@@ -2,7 +2,7 @@
  "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
  "meta": {
   "brand": "Data Sapience",
-  "version": "2.2",
+  "version": "2.3",
   "updated": "2026-06-17",
   "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
   "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
@@ -578,7 +578,8 @@
     "фото без обработки",
     "искажение пропорций"
    ],
-   "charts_ref": "диаграммы/таблицы/схемы — по вкладке «Оформление графиков и схем» брендбука"
+   "charts_ref": "диаграммы/таблицы/схемы — по вкладке «Оформление графиков и схем» брендбука",
+   "graphics_usage": "Фирменные 3D-элементы (ring/orbit — graphics/ring.png; объёмный шестиугольник — graphics/hexagon-3d.png; 3D-знак — graphics/symbol-3d.png) применять для ЗАПОЛНЕНИЯ пространства и АКЦЕНТА: обложки, разделители, продуктовые слайды, hero-блоки, пустые ячейки сетки. Брать готовыми из репо graphics/, НЕ перерисовывать и НЕ перекрашивать."
   },
   "checklist": [
    "слайд из шаблона",
@@ -874,7 +875,7 @@
   "icons": "icons/ — icons-dark-on-light.jpg, icons-green-on-dark.jpg (превью) + icons-png-800.zip (340 линейных иконок PNG)",
   "patterns": "patterns/{png,eps,ai} — talys_pattern-01..12 (Blob/Glow 01–03, Blob Filled 04–06, Blob Outline 07–09, Ribbon 10–12)",
   "gradients": "gradients/{png,eps,ai} — talys_gradient-01..03",
-  "graphics": "graphics/ring.png, symbol-3d.png, hexagon-3d.png (фирменные 3D-элементы)",
+  "graphics": "graphics/ring.png (кольцо/орбита), graphics/hexagon-3d.png (объёмный шестиугольник), graphics/symbol-3d.png (3D-знак ds) — фирменные 3D-элементы для заполнения/акцента",
   "missing": "Полный самостоятельный фирменный стиль Data Ocean — внешний (dataplatform.ru); в брендбуке/репо — только DS-перекрашенные («комплектные») версии логотипов Data Ocean.",
   "backgrounds": "backgrounds/ — готовые фоны (dark-cover.png, light-content.png) + types/ (6 превью типов из раздела 02). Блоки для сборки: patterns/, gradients/, graphics/hexagon.svg"
  },
