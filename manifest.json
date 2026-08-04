@@ -2,8 +2,8 @@
   "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
   "meta": {
     "brand": "Data Sapience",
-    "version": "2.16",
-    "updated": "2026-06-30",
+    "version": "2.17",
+    "updated": "2026-08-04",
     "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
     "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
     "master_texts": "https://docs.google.com/spreadsheets/d/1Dh4XPZVN5zseNpFHAjo1CmUsN146kSWm_G6whpzjTIU/edit?gid=1210120956",
@@ -14,7 +14,8 @@
     },
     "skill": "https://github.com/TerryAirwalker/datasapience-brand-assets/tree/main/skill/datasapience-design",
     "changelog_2_5": "Зафиксированы правила фоновых блобов (форма = фирменный шестиугольник, запрет замощения паттерном, видимость светлых блобов) и обязательная самопроверка результата по брендбуку перед показом пользователю.",
-    "changelog_2_6": "Одобренный приём: объёмный 3D-шестиугольник (graphics/hexagon-3d.png) как фоновые блобы на светлом баннере/обложке — не перекрашивать, только вращать (тёмный край наружу, светлый к тексту), разные размеры."
+    "changelog_2_6": "Одобренный приём: объёмный 3D-шестиугольник (graphics/hexagon-3d.png) как фоновые блобы на светлом баннере/обложке — не перекрашивать, только вращать (тёмный край наружу, светлый к тексту), разные размеры.",
+    "changelog_2_17": "Технический релиз (без изменения токенов/правил): исправлены битые пути в datasapience-design SKILL.md (patterns/ вместо pattern/, scripts/blob_check.py вместо assets/scripts/blob_check.py, убрана ссылка на несуществующий hexpath.txt), добавлена подгрузка ru_typo.py из репозитория при отсутствии локально, зафиксировано отсутствие ds_release.py (нет ни в одном репозитории)."
   },
   "how_agent_should_use": [
     "Это источник правды по фирменному стилю Data Sapience для ЛЮБЫХ материалов (слайды, документы, веб, соцсети, графика, инфографика).",
