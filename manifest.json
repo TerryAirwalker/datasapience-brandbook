@@ -2,11 +2,14 @@
   "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
   "meta": {
     "brand": "Data Sapience",
-    "version": "2.23",
-    "updated": "2026-09-03",
+    "version": "2.24",
+    "updated": "2026-10-07",
     "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
     "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
-    "master_texts": "https://docs.google.com/spreadsheets/d/1Dh4XPZVN5zseNpFHAjo1CmUsN146kSWm_G6whpzjTIU/edit?gid=1210120956",
+    "product_sources": [
+      "https://datasapience.ru/",
+      "https://dataplatform.ru/"
+    ],
     "website": "https://datasapience.ru",
     "contact": {
       "email": "ms@datasapience.ru",
@@ -18,13 +21,14 @@
     "changelog_2_17": "Технический релиз (без изменения токенов/правил): исправлены битые пути в datasapience-design SKILL.md (patterns/ вместо pattern/, scripts/blob_check.py вместо assets/scripts/blob_check.py, убрана ссылка на несуществующий hexpath.txt), добавлена подгрузка ru_typo.py из репозитория при отсутствии локально, на момент этого релиза ds_release.py в репозиториях отсутствовал; позже добавлен и опубликован (scripts/ds_release.py в datasapience-brand-assets).",
     "changelog_2_20": "Правило чередования фонов уточнено: чередование считается ПО ТОНУ (светлый↔тёмный), не по имени фон-режима; два светлых фона подряд (в т.ч. светлый под белой карточкой) = одна светлая серия. Без бампа версии (files-only).",
     "changelog_2_22": "Редактируемая сборка презентаций (Режим A) переведена на детерминированный конвейер HTML→pptx: добавлены scripts/html_to_pptx.py и scripts/ds_fonts.py — автоснятие координат/кегля/цвета/выравнивания из HTML-макета (Playwright getBoundingClientRect + computed style), фон рендерится тем же макетом со скрытым текстом, живой текст кладётся точно по координатам (1px=6350 EMU, pt=px×0.5), встраиваются все начертания Unbounded/Ping LCG (отдельные typeface-имена). Устраняет расхождение редактируемого режима с макетом (кривая вёрстка/кегли в прежнем ручном пути). Контракт авторинга HTML — scripts/README-slides-editable.md.",
-    "changelog_2_23": "Пересмотр дефолта презентаций по итогам ревизии. (1) ДЕФОЛТ .pptx = ПОЛНОСТЬЮ ЗАПЕЧЁННАЯ красивая дека из HTML (текст в картинке, одинаково на любой машине); редактируемый («живой» текст поверх) — ТОЛЬКО по запросу, обычно после выдачи. Всегда предлагать PDF. Вопрос про формат/встраивание заранее НЕ задавать (убрана блокирующая проверка Шаг 0.5). (2) Зафиксировано правило адресации шрифтов: font.name только 'Unbounded'/'Ping LCG' (Reg/Bold), веса→Bold/Regular через ds_fonts.resolve_facename — корень прошлых «кривых шрифтов» на macOS (Core Text не адресует имена по весам). (3) Editable-конвейер доведён: снятие реальных переносов строк (Range), точный интерлиньяж пунктами, рост бокса по выравниванию, автоперенос-страховка. (4) Заголовки обложки/номера раздела ExtraBold→Bold (ExtraBold «слишком жирный», по эталону). (5) При editable шрифты не только встраивать, но и ПРИКЛАДЫВАТЬ файлами + памятка про macOS (встроенные игнорируются). (6) Эталон качества — ref/examples/CVM-эталон.pptx (большие цифры, схемы-блокдиаграммы, Before→After, тени)."
+    "changelog_2_23": "Пересмотр дефолта презентаций по итогам ревизии. (1) ДЕФОЛТ .pptx = ПОЛНОСТЬЮ ЗАПЕЧЁННАЯ красивая дека из HTML (текст в картинке, одинаково на любой машине); редактируемый («живой» текст поверх) — ТОЛЬКО по запросу, обычно после выдачи. Всегда предлагать PDF. Вопрос про формат/встраивание заранее НЕ задавать (убрана блокирующая проверка Шаг 0.5). (2) Зафиксировано правило адресации шрифтов: font.name только 'Unbounded'/'Ping LCG' (Reg/Bold), веса→Bold/Regular через ds_fonts.resolve_facename — корень прошлых «кривых шрифтов» на macOS (Core Text не адресует имена по весам). (3) Editable-конвейер доведён: снятие реальных переносов строк (Range), точный интерлиньяж пунктами, рост бокса по выравниванию, автоперенос-страховка. (4) Заголовки обложки/номера раздела ExtraBold→Bold (ExtraBold «слишком жирный», по эталону). (5) При editable шрифты не только встраивать, но и ПРИКЛАДЫВАТЬ файлами + памятка про macOS (встроенные игнорируются). (6) Эталон качества — ref/examples/CVM-эталон.pptx (большие цифры, схемы-блокдиаграммы, Before→After, тени).",
+    "changelog_2_24": "Состав продуктов синхронизирован с сайтами datasapience.ru («Платформы и продукты») и dataplatform.ru («Продукты») вместо Google-таблицы (scripts/ds_products_sync.py, products.source, products.counts). Добавлены CM Ocean Loyalty, TALYS.GRC, Kolmogorov Chat, Data Ocean Store, Data Ocean Platform UI и новая линейка Industrial Ocean (описание + раздел логотипа 07 во вкладке «Брендинг бизнес-приложений», ассеты logos/products/*/industrial-ocean); удалены Kolmogorov Continuity-LLM и Continuity-A2P (нет на сайте). Линеек — 6, продуктов — 31. meta.master_texts → meta.product_sources. Новое правило products.company.developer_rule: разработчик решений — всегда Data Sapience (вендор), GlowByte — только интегратор; «GlowByte разработал решение» запрещено, отступление — через согласование с маркетингом."
   },
   "how_agent_should_use": [
     "Это источник правды по фирменному стилю Data Sapience для ЛЮБЫХ материалов (слайды, документы, веб, соцсети, графика, инфографика).",
     "Начни с entrypoint, затем по routing определи, какие ключи читать под свою задачу.",
     "Не выдумывай цвета, шрифты, формы и тексты — бери из манифеста. Файлы (лого, шрифты, иконки, паттерны, шаблон) — из assets (репозиторий).",
-    "Слайды: всегда от шаблона (slides.agent_workflow). Графики/схемы: data_visualization. Тексты: products (актуальные — meta.master_texts).",
+    "Слайды: всегда от шаблона (slides.agent_workflow). Графики/схемы: data_visualization. Тексты: products (состав синхронизирован с сайтами — meta.product_sources, products.source).",
     "Соблюдай rules_global.forbidden. Тёплые цвета вне палитры запрещены. Проверяй результат по checklist'ам."
   ],
   "colors": {
@@ -706,6 +710,7 @@
       "менять по смыслу описания продуктов",
       "дублировать «Data Sapience» на одном слайде (лого + заголовок + сайт одновременно)",
       "упоминать материнскую группу («ГК GlowByte», «группа компаний GlowByte» и аналоги) в дефолтных материалах — только по явному запросу",
+      "приписывать разработку решений GlowByte («GlowByte разработал решение», «решение/продукт GlowByte») — разработчик всегда Data Sapience (вендор), GlowByte — только интегратор; отступление — только по согласованию с маркетингом (products.company.developer_rule)",
       "самостоятельно делать или публиковать сайты и любые материалы для публичного поля — всё публичное только через маркетинг (можно приносить макеты)",
       "сочинять тексты с нуля без ввода пользователя; приводить цифры/значения, которых нет в описаниях"
     ],
@@ -717,13 +722,14 @@
         "слайды — slides.checklist; графики/схемы — data_visualization; чередование фонов — slides.background_rotation",
         "логотип/название — правило одного упоминания; цвет логотипа по фону (тёмный→white, светлый→blue/black)",
         "шрифты Unbounded/Ping LCG встроены (@font-face base64), размеры по typography",
-        "тексты о продуктах — только из products / мастер-таблицы",
+        "тексты о продуктах — только из products",
         "нет упоминания материнской группы («ГК GlowByte» и аналоги), если пользователь не просил явно",
+        "разработчик решений — Data Sapience; GlowByte (если упомянут) — только как интегратор, не как разработчик",
         "материал для публичного поля / сайт — не публиковать самостоятельно, направить в маркетинг"
       ]
     },
     "public_field": "Делать и публиковать сайты самостоятельно нельзя. Всё для публичного поля (сайты, лендинги, внешние публикации) — только через маркетинг, который оказывает услуги по дизайну и разработке. Можно приносить макеты, но любая публикация в публичном поле проходит через маркетинг (ms@datasapience.ru).",
-    "texts": "Агент: выдаёт справку из products/master-texts и редактирует/вычитывает присланный пользователем текст (грамотность, оформление). Не сочиняет тексты с нуля без ввода пользователя и не приводит цифры/значения, которых нет в описаниях. Готовые статьи/релизы пользователь относит в PR."
+    "texts": "Агент: выдаёт справку из products и редактирует/вычитывает присланный пользователем текст (грамотность, оформление). Не сочиняет тексты с нуля без ввода пользователя и не приводит цифры/значения, которых нет в описаниях. Готовые статьи/релизы пользователь относит в PR."
   },
   "products": {
     "company": {
@@ -732,6 +738,8 @@
       "affiliation": "Входит в группу компаний GlowByte (ГК GlowByte).",
       "affiliation_in_default_materials": false,
       "affiliation_note": "Упоминание материнской группы («ГК GlowByte», «группа компаний GlowByte» и аналоги) НЕ добавляется в дефолтные материалы (слайды, баннеры, документы) — только по явному запросу пользователя или согласованию с маркетингом (ms@datasapience.ru).",
+      "developer": "Data Sapience",
+      "developer_rule": "Разработчик (вендор) всех решений и продуктов — ВСЕГДА Data Sapience. GlowByte может фигурировать только как интегратор (внедрение, проект у заказчика). Формулировки вида «GlowByte разработал решение», «решение GlowByte», «продукт GlowByte» в материалах ЗАПРЕЩЕНЫ. Если пользователь просит так написать (или иначе приписать разработку не Data Sapience) — не выполнять молча: предупредить, что это нарушение правила и требуется согласование с маркетингом (ms@datasapience.ru). Упоминание GlowByte как интегратора не отменяет правило affiliation_in_default_materials.",
       "note_facts": "Развёртывание (облако/on-prem/гибрид) и подход к сборке исходников (open source) — только в общей справке «О компании», НЕ в описаниях отдельных продуктов."
     },
     "naming": {
@@ -753,45 +761,63 @@
         "sub": [
           {
             "name": "CM Ocean Audience",
-            "desc": "управление маркетинговыми данными"
+            "desc": "управление маркетинговыми данными",
+            "url": "https://datasapience.ru/platforms/cmocean/audience"
           },
           {
             "name": "CM Ocean BatchFlow",
-            "desc": "offline-маркетинг"
+            "desc": "offline-маркетинг",
+            "url": "https://datasapience.ru/platforms/cmocean/batch-flow"
           },
           {
             "name": "CM Ocean Real-time Flow",
-            "desc": "online-маркетинг"
+            "desc": "online-маркетинг",
+            "url": "https://datasapience.ru/platforms/cmocean/real-time-flow"
           },
           {
             "name": "CM Ocean Template",
-            "desc": "библиотека шаблонов коммуникаций"
+            "desc": "библиотека шаблонов коммуникаций",
+            "url": "https://datasapience.ru/platforms/cmocean/template"
           },
           {
             "name": "CM Ocean Policy",
-            "desc": "контактная и продуктовая политики"
+            "desc": "контактная и продуктовая политики",
+            "url": "https://datasapience.ru/platforms/cmocean/policy"
           },
           {
             "name": "CM Ocean Communication",
-            "desc": "коммуникационный хаб"
+            "desc": "коммуникационный хаб",
+            "url": "https://datasapience.ru/platforms/cmocean/communication"
           },
           {
             "name": "CM Ocean Optimum",
-            "desc": "оптимизация маркетинговых предложений"
+            "desc": "оптимизация маркетинговых предложений",
+            "url": "https://datasapience.ru/platforms/cmocean/optimum"
           },
           {
             "name": "CM Ocean Offer",
-            "desc": "каталог маркетинговых предложений"
+            "desc": "каталог маркетинговых предложений",
+            "url": "https://datasapience.ru/platforms/cmocean/offer"
           },
           {
             "name": "CM Ocean Control",
-            "desc": "управление жизненным циклом кампаний"
+            "desc": "управление жизненным циклом кампаний",
+            "url": "https://datasapience.ru/platforms/cmocean/control"
           },
           {
             "name": "CM Ocean Digital",
-            "desc": "сбор данных и персонализация цифровых каналов"
+            "desc": "сбор данных и персонализация цифровых каналов",
+            "url": "https://datasapience.ru/platforms/cmocean/digital"
+          },
+          {
+            "name": "CM Ocean Loyalty",
+            "desc": "гибкая система для проектирования программ лояльности",
+            "url": "https://datasapience.ru/platforms/cmocean/loyalty",
+            "source": "site",
+            "added": "2026-10-07"
           }
-        ]
+        ],
+        "url": "https://datasapience.ru/platforms/cmocean"
       },
       {
         "name": "TALYS Ocean",
@@ -799,21 +825,33 @@
         "sub": [
           {
             "name": "TALYS.SDE",
-            "desc": "онлайн-движок для принятия решений по кредитным и другим видам рисков и антифроду в реальном времени"
+            "desc": "онлайн-движок для принятия решений по кредитным и другим видам рисков и антифроду в реальном времени",
+            "url": "https://datasapience.ru/platforms/talysocean/talys-sde"
           },
           {
             "name": "TALYS.AML",
-            "desc": "финансовый мониторинг: ПОД/ФТ и комплаенс (115-ФЗ, FATCA/CRS, санкции)"
+            "desc": "финансовый мониторинг: ПОД/ФТ и комплаенс (115-ФЗ, FATCA/CRS, санкции)",
+            "url": "https://datasapience.ru/platforms/talysocean/talys-aml"
           },
           {
             "name": "TALYS.OpRisk",
-            "desc": "управление операционными рисками"
+            "desc": "управление операционными рисками",
+            "url": "https://datasapience.ru/platforms/talysocean/talys-oprisk"
           },
           {
             "name": "TALYS.Motor",
-            "desc": "сегментация ОСАГО"
+            "desc": "сегментация ОСАГО",
+            "url": "https://datasapience.ru/platforms/talysocean/talys-motor"
+          },
+          {
+            "name": "TALYS.GRC",
+            "desc": "система GRC для автоматизации управления рисками, внутреннего аудита и контроля",
+            "url": "https://datasapience.ru/platforms/talysocean/talys-grc",
+            "source": "site",
+            "added": "2026-10-07"
           }
-        ]
+        ],
+        "url": "https://datasapience.ru/platforms/talysocean"
       },
       {
         "name": "Kolmogorov AI",
@@ -821,29 +859,33 @@
         "sub": [
           {
             "name": "Kolmogorov Continuity",
-            "desc": "управление жизненным циклом моделей и аналитических проектов (Decision Ops)"
+            "desc": "управление жизненным циклом моделей и аналитических проектов (Decision Ops)",
+            "url": "https://datasapience.ru/platforms/kolmogorov/continuity"
           },
           {
             "name": "Kolmogorov Axiom",
-            "desc": "Feature Store с low-code конструктором датасетов"
-          },
-          {
-            "name": "Kolmogorov Continuity-LLM",
-            "desc": "создание, тестирование и безопасный деплой AI-агентов"
+            "desc": "Feature Store с low-code конструктором датасетов",
+            "url": "https://datasapience.ru/platforms/kolmogorov/axiom"
           },
           {
             "name": "Kolmogorov ABacus",
-            "desc": "фреймворк для A/B-тестирования"
+            "desc": "фреймворк для A/B-тестирования",
+            "url": "https://datasapience.ru/platforms/kolmogorov/abacus"
           },
           {
             "name": "Kolmogorov Predicate",
-            "desc": "мониторинг качества аналитических продуктов"
+            "desc": "мониторинг качества аналитических продуктов",
+            "url": "https://datasapience.ru/platforms/kolmogorov/predicate"
           },
           {
-            "name": "Kolmogorov Continuity-A2P",
-            "desc": "работа с моделями"
+            "name": "Kolmogorov Chat",
+            "desc": "корпоративная AI-платформа нового поколения",
+            "url": "https://datasapience.ru/platforms/kolmogorov/chat",
+            "source": "site",
+            "added": "2026-10-07"
           }
-        ]
+        ],
+        "url": "https://datasapience.ru/platforms/kolmogorov"
       },
       {
         "name": "Data Ocean Governance",
@@ -851,21 +893,26 @@
         "sub": [
           {
             "name": "DOG EMM",
-            "desc": "управление метаданными: каталог данных и бизнес-глоссарий, взгляд 360°"
+            "desc": "управление метаданными: каталог данных и бизнес-глоссарий, взгляд 360°",
+            "url": "https://datasapience.ru/platforms/data-governance/emm"
           },
           {
             "name": "DOG DQ",
-            "desc": "управление качеством данных: дата-контракты и инциденты"
+            "desc": "управление качеством данных: дата-контракты и инциденты",
+            "url": "https://datasapience.ru/platforms/data-governance/dq"
           },
           {
             "name": "DOG MDM",
-            "desc": "управление мастер-данными: очистка, обогащение, стандартизация, дедубликация"
+            "desc": "управление мастер-данными: очистка, обогащение, стандартизация, дедубликация",
+            "url": "https://datasapience.ru/platforms/data-governance/mdm"
           },
           {
             "name": "Ingresso One",
-            "desc": "организация и автоматизация работы со справочными (НСИ) и пользовательскими данными"
+            "desc": "организация и автоматизация работы со справочными (НСИ) и пользовательскими данными",
+            "url": "https://datasapience.ru/platforms/data-governance/ingresso"
           }
-        ]
+        ],
+        "url": "https://datasapience.ru/platforms/data-governance"
       },
       {
         "name": "Data Ocean",
@@ -874,17 +921,43 @@
         "sub": [
           {
             "name": "Data Ocean Nova",
-            "desc": "универсальная Lakehouse-платформа данных"
+            "desc": "универсальная Lakehouse-платформа данных",
+            "url": "https://dataplatform.ru/products/nova"
           },
           {
             "name": "Data Ocean Flex Loader",
-            "desc": "инструмент для быстрого наполнения хранилища или озера данных"
+            "desc": "инструмент для быстрого наполнения хранилища или озера данных",
+            "url": "https://dataplatform.ru/products/flex-loader"
           },
           {
             "name": "Data Ocean SDI",
-            "desc": "low-code потоковая обработка и репликация данных"
+            "desc": "low-code потоковая обработка и репликация данных",
+            "url": "https://dataplatform.ru/products/sdi"
+          },
+          {
+            "name": "Data Ocean Platform UI",
+            "desc": "приложение для управления инфраструктурой и платформой Data Ocean в графической среде",
+            "url": "https://dataplatform.ru/products/cluster-manager",
+            "source": "site",
+            "added": "2026-10-07"
+          },
+          {
+            "name": "Data Ocean Store",
+            "desc": "объектное хранилище данных для аналитики",
+            "url": "https://dataplatform.ru/data-ocean-store",
+            "source": "site",
+            "added": "2026-10-07"
           }
-        ]
+        ],
+        "url": "https://dataplatform.ru/"
+      },
+      {
+        "name": "Industrial Ocean",
+        "desc": "платформа для интеллектуального анализа промышленных данных и IIoT",
+        "url": "https://datasapience.ru/platforms/industrialsolutions/industrial-ocean",
+        "source": "site",
+        "added": "2026-10-07",
+        "sub": []
       }
     ],
     "excluded": [
@@ -900,7 +973,23 @@
       "talys": "TALYS ocean — тёмный знак+текст на светлом; на тёмном — светлый",
       "data_ocean_line": "отдельного логотипа линейки «Data Ocean» нет — линейка представляется логотипом Data Ocean Nova в палитре DS (logos/products/png/data-ocean/nova-brand.png)",
       "governance": "логотип Data Ocean Governance = ТОЛЬКО знак (без вордмарка) → название подписывать отдельно шрифтом Unbounded",
-      "files": "logos/products/png/{cm-ocean,kolmogorov,talys,data-ocean-governance}.png + data-ocean/{nova,flex-loader,data-ocean-sdi}-{brand,white}.png"
+      "files": "logos/products/png/{cm-ocean,kolmogorov,talys,data-ocean-governance}.png + data-ocean/{nova,flex-loader,data-ocean-sdi}-{brand,white}.png + industrial-ocean/industrial-ocean-{horizontal,vertical,icon,text}-{color,white,black}.png (SVG — logos/products/svg/industrial-ocean/)",
+      "industrial_ocean": "Industrial Ocean — знак (шестерёнка с волной) + текст «industrial ocean», в ИСХОДНЫХ цветах продукта (#004C77, #70A8B6, #A3D3E1, #D8E7ED); не перекрашивать без согласования с маркетингом. Начертания: горизонтальное (основное), вертикальное (квадратные форматы), знак, текст; варианты цветной / белый (на тёмном) / чёрный."
+    },
+    "source": {
+      "sites": [
+        "https://datasapience.ru/",
+        "https://dataplatform.ru/"
+      ],
+      "synced_at": "2026-10-07",
+      "remind_after_days": 30,
+      "policy": "Состав продуктов — по сайтам datasapience.ru («Платформы и продукты») и dataplatform.ru («Продукты»). Названия/описания существующих продуктов — отредактированные (сохраняются при синхронизации); новые продукты получают название и описание с сайта (source: site). Обновление — по команде «обнови продукты» (скилл brandbook → scripts/ds_products_sync.py).",
+      "script": "datasapience-brandbook-source/scripts/ds_products_sync.py"
+    },
+    "counts": {
+      "lines": 6,
+      "products": 31,
+      "note": "Пересчитывается ds_products_sync.py; продукт = под-продукт линейки, линейка без под-продуктов = 1 продукт."
     }
   },
   "assets": {
@@ -994,7 +1083,7 @@
     ],
     "copywriting": [
       "products",
-      "meta.master_texts"
+      "meta.product_sources"
     ],
     "get_assets": [
       "assets"
@@ -1008,7 +1097,7 @@
       "rules_global",
       "assets"
     ],
-    "copywriting_note": "reference-only: справка из products/master-texts + edit/proofread присланного пользователем текста; не сочинять с нуля, не выдумывать цифры"
+    "copywriting_note": "reference-only: справка из products + edit/proofread присланного пользователем текста; не сочинять с нуля, не выдумывать цифры"
   },
   "layout": {
     "grid_base_px": 8,
