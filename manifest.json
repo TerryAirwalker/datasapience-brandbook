@@ -2,13 +2,14 @@
   "$schema_note": "Машинно-читаемый манифест брендбука Data Sapience. Источник правды для ИИ-агента, создающего брендовый дизайн (слайды, графику, документы). Версии токенов соответствуют брендбуку.",
   "meta": {
     "brand": "Data Sapience",
-    "version": "2.24",
-    "updated": "2026-10-07",
+    "version": "2.25",
+    "updated": "2026-11-09",
     "brandbook_url": "https://TerryAirwalker.github.io/datasapience-brandbook/",
     "assets_repo": "https://github.com/TerryAirwalker/datasapience-brand-assets",
     "product_sources": [
       "https://datasapience.ru/",
-      "https://dataplatform.ru/"
+      "https://dataplatform.ru/",
+      "https://ai.datasapience.ru/"
     ],
     "website": "https://datasapience.ru",
     "contact": {
@@ -22,7 +23,8 @@
     "changelog_2_20": "Правило чередования фонов уточнено: чередование считается ПО ТОНУ (светлый↔тёмный), не по имени фон-режима; два светлых фона подряд (в т.ч. светлый под белой карточкой) = одна светлая серия. Без бампа версии (files-only).",
     "changelog_2_22": "Редактируемая сборка презентаций (Режим A) переведена на детерминированный конвейер HTML→pptx: добавлены scripts/html_to_pptx.py и scripts/ds_fonts.py — автоснятие координат/кегля/цвета/выравнивания из HTML-макета (Playwright getBoundingClientRect + computed style), фон рендерится тем же макетом со скрытым текстом, живой текст кладётся точно по координатам (1px=6350 EMU, pt=px×0.5), встраиваются все начертания Unbounded/Ping LCG (отдельные typeface-имена). Устраняет расхождение редактируемого режима с макетом (кривая вёрстка/кегли в прежнем ручном пути). Контракт авторинга HTML — scripts/README-slides-editable.md.",
     "changelog_2_23": "Пересмотр дефолта презентаций по итогам ревизии. (1) ДЕФОЛТ .pptx = ПОЛНОСТЬЮ ЗАПЕЧЁННАЯ красивая дека из HTML (текст в картинке, одинаково на любой машине); редактируемый («живой» текст поверх) — ТОЛЬКО по запросу, обычно после выдачи. Всегда предлагать PDF. Вопрос про формат/встраивание заранее НЕ задавать (убрана блокирующая проверка Шаг 0.5). (2) Зафиксировано правило адресации шрифтов: font.name только 'Unbounded'/'Ping LCG' (Reg/Bold), веса→Bold/Regular через ds_fonts.resolve_facename — корень прошлых «кривых шрифтов» на macOS (Core Text не адресует имена по весам). (3) Editable-конвейер доведён: снятие реальных переносов строк (Range), точный интерлиньяж пунктами, рост бокса по выравниванию, автоперенос-страховка. (4) Заголовки обложки/номера раздела ExtraBold→Bold (ExtraBold «слишком жирный», по эталону). (5) При editable шрифты не только встраивать, но и ПРИКЛАДЫВАТЬ файлами + памятка про macOS (встроенные игнорируются). (6) Эталон качества — examples/CVM-эталон.pptx (большие цифры, схемы-блокдиаграммы, Before→After, тени).",
-    "changelog_2_24": "Состав продуктов синхронизирован с сайтами datasapience.ru («Платформы и продукты») и dataplatform.ru («Продукты») вместо Google-таблицы (scripts/ds_products_sync.py, products.source, products.counts). Добавлены CM Ocean Loyalty, TALYS.GRC, Kolmogorov Chat, Data Ocean Store, Data Ocean Platform UI и новая линейка Industrial Ocean (описание + раздел логотипа 07 во вкладке «Брендинг бизнес-приложений», ассеты logos/products/*/industrial-ocean); удалены Kolmogorov Continuity-LLM и Continuity-A2P (нет на сайте). Линеек — 6, продуктов — 31. meta.master_texts → meta.product_sources. Новое правило products.company.developer_rule: разработчик решений — всегда Data Sapience (вендор), GlowByte — только интегратор; «GlowByte разработал решение» запрещено, отступление — через согласование с маркетингом. Доп. исправления по аудиту (без бампа): снята ссылка на несуществующий hexpath.txt; чек-лист/принцип/заметки по слайдам приведены к дефолту «запечённая .pptx» (противоречие с slides.editability); путь эталона examples/CVM-эталон.pptx; routing.presentation_slide += products; assets.logos += industrial-ocean; ru_typo — публичный URL. · Правило client_logos: логотипы клиентов — только после согласования с руководителем/аккаунт-менеджером клиента; агент всегда предупреждает (NDA)."
+    "changelog_2_24": "Состав продуктов синхронизирован с сайтами datasapience.ru («Платформы и продукты») и dataplatform.ru («Продукты») вместо Google-таблицы (scripts/ds_products_sync.py, products.source, products.counts). Добавлены CM Ocean Loyalty, TALYS.GRC, Kolmogorov Chat, Data Ocean Store, Data Ocean Platform UI и новая линейка Industrial Ocean (описание + раздел логотипа 07 во вкладке «Брендинг бизнес-приложений», ассеты logos/products/*/industrial-ocean); удалены Kolmogorov Continuity-LLM и Continuity-A2P (нет на сайте). Линеек — 6, продуктов — 31. meta.master_texts → meta.product_sources. Новое правило products.company.developer_rule: разработчик решений — всегда Data Sapience (вендор), GlowByte — только интегратор; «GlowByte разработал решение» запрещено, отступление — через согласование с маркетингом. Доп. исправления по аудиту (без бампа): снята ссылка на несуществующий hexpath.txt; чек-лист/принцип/заметки по слайдам приведены к дефолту «запечённая .pptx» (противоречие с slides.editability); путь эталона examples/CVM-эталон.pptx; routing.presentation_slide += products; assets.logos += industrial-ocean; ru_typo — публичный URL. · Правило client_logos: логотипы клиентов — только после согласования с руководителем/аккаунт-менеджером клиента; агент всегда предупреждает (NDA).",
+    "changelog_2_25": "Контент брошюры «Обзор технологических решений Data Sapience 2026»: описания компании, линеек и продуктов; + CM Ocean Surf AI (сайт), Kolmogorov Continuity-LLM и Continuity-A2P (брошюра, source: brochure) — 6 линеек / 34 продукта; Kolmogorov Chat — главный продукт линейки (первым); источники текстов: Chat — его страница на datasapience.ru, LLM-часть Kolmogorov — ai.datasapience.ru; схема продуктов «Архитектура решений Data Sapience» (graphics/architecture/, вставлять как есть); CMYK фирменных цветов для печати; правило единых терминов (AI, AI-ready, data-платформы)."
   },
   "how_agent_should_use": [
     "Это источник правды по фирменному стилю Data Sapience для ЛЮБЫХ материалов (слайды, документы, веб, соцсети, графика, инфографика).",
@@ -731,7 +733,7 @@
       ]
     },
     "public_field": "Делать и публиковать сайты самостоятельно нельзя. Всё для публичного поля (сайты, лендинги, внешние публикации) — только через маркетинг, который оказывает услуги по дизайну и разработке. Можно приносить макеты, но любая публикация в публичном поле проходит через маркетинг (ms@datasapience.ru).",
-    "texts": "Агент: выдаёт справку из products и редактирует/вычитывает присланный пользователем текст (грамотность, оформление). Не сочиняет тексты с нуля без ввода пользователя и не приводит цифры/значения, которых нет в описаниях. Готовые статьи/релизы пользователь относит в PR.",
+    "texts": "Агент: выдаёт справку из products и редактирует/вычитывает присланный пользователем текст (грамотность, оформление). Не сочиняет тексты с нуля без ввода пользователя и не приводит цифры/значения, которых нет в описаниях. Готовые статьи/релизы пользователь относит в PR. Термины (как в брошюре 2026): AI, а не ИИ — AI-агенты, AI-ассистент, AI-платформа, корпоративный AI; AI-ready (r строчная); data-платформы, data-продукты (не «Big Data платформы», не «дата-продукты»); составные слова с латиницей — через дефис: Data Science-команды, Lakehouse-платформа.",
     "client_logos": {
       "rule": "Логотипы клиентов (заказчиков) в ЛЮБЫХ материалах — слайды, документы, баннеры, веб-макеты, витрины «Наши клиенты», кейсы — размещаются только после согласования с руководителем/аккаунт-менеджером этого клиента. Скилл и маркетинг не могут гарантировать, что размещение не нарушает NDA или иные договорённости с клиентом.",
       "agent_action": "Если пользователь просит добавить логотип(ы) клиента(ов) в презентацию/материал (или лого клиентов попадают в материал иначе — из шаблона, витрины, кейса) — ВСЕГДА выводить пользователю предупреждение в ответе (не на слайде): «⚠️ Логотипы клиентов нужно согласовать с руководителем/аккаунт-менеджером клиента — мы не можем гарантировать, что их размещение не нарушает NDA». Материал собирать можно (не блокировать), но предупреждение обязательно каждый раз.",
@@ -742,7 +744,7 @@
   "products": {
     "company": {
       "name": "Data Sapience",
-      "summary": "Российский вендор, разработчик ИТ-решений для бизнеса. Команда с 20-летним опытом. Все продукты — в Реестре отечественного ПО.",
+      "summary": "Российский вендор, поставщик собственного программного обеспечения: аналитические инструменты, решения в области генеративного AI и платформы данных для бизнеса. Команда с 20-летним опытом. Все продукты — в Реестре отечественного ПО.",
       "affiliation": "Входит в группу компаний GlowByte (ГК GlowByte).",
       "affiliation_in_default_materials": false,
       "affiliation_note": "Упоминание материнской группы («ГК GlowByte», «группа компаний GlowByte» и аналоги) НЕ добавляется в дефолтные материалы (слайды, баннеры, документы) — только по явному запросу пользователя или согласованию с маркетингом (ms@datasapience.ru).",
@@ -765,21 +767,21 @@
     "lines": [
       {
         "name": "CM Ocean",
-        "desc": "платформа CVM-маркетинга",
+        "desc": "единая платформа CVM & Loyalty",
         "sub": [
           {
             "name": "CM Ocean Audience",
-            "desc": "управление маркетинговыми данными",
+            "desc": "управление маркетинговыми данными: сегменты, датасеты, бизнес-слой над источниками",
             "url": "https://datasapience.ru/platforms/cmocean/audience"
           },
           {
             "name": "CM Ocean BatchFlow",
-            "desc": "offline-маркетинг",
+            "desc": "offline-маркетинг: многошаговые и многоканальные кампании",
             "url": "https://datasapience.ru/platforms/cmocean/batch-flow"
           },
           {
             "name": "CM Ocean Real-time Flow",
-            "desc": "online-маркетинг",
+            "desc": "online-маркетинг: реакция на события в реальном времени",
             "url": "https://datasapience.ru/platforms/cmocean/real-time-flow"
           },
           {
@@ -814,15 +816,22 @@
           },
           {
             "name": "CM Ocean Digital",
-            "desc": "сбор данных и персонализация цифровых каналов",
+            "desc": "сбор данных и персонализация цифровых каналов: CDP, web и in-app",
             "url": "https://datasapience.ru/platforms/cmocean/digital"
           },
           {
             "name": "CM Ocean Loyalty",
-            "desc": "гибкая система для проектирования программ лояльности",
+            "desc": "программа лояльности полного цикла: баллы, карта, уровни, механики без разработки",
             "url": "https://datasapience.ru/platforms/cmocean/loyalty",
             "source": "site",
             "added": "2026-10-07"
+          },
+          {
+            "name": "CM Ocean Surf AI",
+            "desc": "модуль AI-агентов для подбора аудитории, сборки маркетинговых кампаний и подготовки коммуникаций",
+            "url": "https://datasapience.ru/platforms/cmocean/surf-ai",
+            "source": "site",
+            "added": "2026-11-09"
           }
         ],
         "url": "https://datasapience.ru/platforms/cmocean"
@@ -833,7 +842,7 @@
         "sub": [
           {
             "name": "TALYS.SDE",
-            "desc": "онлайн-движок для принятия решений по кредитным и другим видам рисков и антифроду в реальном времени",
+            "desc": "онлайн-движок для принятия решений по кредитным и другим видам рисков и антифроду в режиме реального времени",
             "url": "https://datasapience.ru/platforms/talysocean/talys-sde"
           },
           {
@@ -843,12 +852,12 @@
           },
           {
             "name": "TALYS.OpRisk",
-            "desc": "управление операционными рисками",
+            "desc": "управление операционными рисками в банках по 716-П ЦБ РФ",
             "url": "https://datasapience.ru/platforms/talysocean/talys-oprisk"
           },
           {
             "name": "TALYS.Motor",
-            "desc": "сегментация ОСАГО",
+            "desc": "аналитическая сегментация ОСАГО: стратегия сегментации входящего потока котировок с гарантированным SLA, AI-оценка риска по полису",
             "url": "https://datasapience.ru/platforms/talysocean/talys-motor"
           },
           {
@@ -863,11 +872,18 @@
       },
       {
         "name": "Kolmogorov AI",
-        "desc": "платформа аналитики данных, машинного обучения и LLM/MLOps",
+        "desc": "платформа корпоративного AI: от ассистентов и агентов для каждого сотрудника до промышленной разработки AI-агентов и ML-моделей",
         "sub": [
           {
+            "name": "Kolmogorov Chat",
+            "desc": "корпоративный AI-портал в контуре компании: все ведущие AI-модели для каждого сотрудника, один портал, вход через SSO, полный контроль бюджетов",
+            "url": "https://datasapience.ru/platforms/kolmogorov/chat",
+            "source": "site",
+            "added": "2026-10-07"
+          },
+          {
             "name": "Kolmogorov Continuity",
-            "desc": "управление жизненным циклом моделей и аналитических проектов (Decision Ops)",
+            "desc": "управление жизненным циклом моделей и аналитических проектов (Decision Ops, ML/LLMOps, МСФО)",
             "url": "https://datasapience.ru/platforms/kolmogorov/continuity"
           },
           {
@@ -882,15 +898,22 @@
           },
           {
             "name": "Kolmogorov Predicate",
-            "desc": "мониторинг качества аналитических продуктов",
+            "desc": "мониторинг и валидация моделей, 70+ метрик из коробки",
             "url": "https://datasapience.ru/platforms/kolmogorov/predicate"
           },
           {
-            "name": "Kolmogorov Chat",
-            "desc": "корпоративная AI-платформа нового поколения",
-            "url": "https://datasapience.ru/platforms/kolmogorov/chat",
-            "source": "site",
-            "added": "2026-10-07"
+            "name": "Kolmogorov Continuity-LLM",
+            "desc": "расширение Continuity для создания и запуска AI-агентов: low-code конструктор, тестирование в Playground, генерация кода и деплой в контуре компании",
+            "url": "https://ai.datasapience.ru/",
+            "source": "brochure",
+            "added": "2026-11-09"
+          },
+          {
+            "name": "Kolmogorov Continuity-A2P",
+            "desc": "рабочее место Data Scientist",
+            "url": "https://datasapience.ru/platforms/kolmogorov",
+            "source": "brochure",
+            "added": "2026-11-09"
           }
         ],
         "url": "https://datasapience.ru/platforms/kolmogorov"
@@ -901,7 +924,7 @@
         "sub": [
           {
             "name": "DOG EMM",
-            "desc": "управление метаданными: каталог данных и бизнес-глоссарий, взгляд 360°",
+            "desc": "AI-ready управление метаданными и семантическим слоем: каталог данных, бизнес-глоссарий, взгляд на данные 360° для людей и AI-агентов",
             "url": "https://datasapience.ru/platforms/data-governance/emm"
           },
           {
@@ -911,12 +934,12 @@
           },
           {
             "name": "DOG MDM",
-            "desc": "управление мастер-данными: очистка, обогащение, стандартизация, дедубликация",
+            "desc": "мультидоменный операционный и аналитический MDM: очистка, обогащение, стандартизация, дедупликация",
             "url": "https://datasapience.ru/platforms/data-governance/mdm"
           },
           {
             "name": "Ingresso One",
-            "desc": "организация и автоматизация работы со справочными (НСИ) и пользовательскими данными",
+            "desc": "организация и автоматизация работы с НСИ и данными бизнес-пользователей: ведение, проверка, согласование изменений и передача в корпоративные системы",
             "url": "https://datasapience.ru/platforms/data-governance/ingresso"
           }
         ],
@@ -929,17 +952,17 @@
         "sub": [
           {
             "name": "Data Ocean Nova",
-            "desc": "универсальная Lakehouse-платформа данных",
+            "desc": "универсальная AI-ready Lakehouse-платформа данных нового поколения: подход Data Warehouse и масштабирование Data Lake",
             "url": "https://dataplatform.ru/products/nova"
           },
           {
             "name": "Data Ocean Flex Loader",
-            "desc": "инструмент для быстрого наполнения хранилища или озера данных",
+            "desc": "инструмент для пакетной репликации и интеграции данных",
             "url": "https://dataplatform.ru/products/flex-loader"
           },
           {
             "name": "Data Ocean SDI",
-            "desc": "low-code потоковая обработка и репликация данных",
+            "desc": "low-code инструмент для потоковой обработки и репликации данных",
             "url": "https://dataplatform.ru/products/sdi"
           },
           {
@@ -951,7 +974,7 @@
           },
           {
             "name": "Data Ocean Store",
-            "desc": "объектное хранилище данных для аналитики",
+            "desc": "высокопроизводительное объектное хранилище для аналитики: совместимость с S3, кэширование метаданных Iceberg, отказоустойчивость Active-Active",
             "url": "https://dataplatform.ru/data-ocean-store",
             "source": "site",
             "added": "2026-10-07"
@@ -989,14 +1012,14 @@
         "https://datasapience.ru/",
         "https://dataplatform.ru/"
       ],
-      "synced_at": "2026-10-07",
+      "synced_at": "2026-11-09",
       "remind_after_days": 30,
-      "policy": "Состав продуктов — по сайтам datasapience.ru («Платформы и продукты») и dataplatform.ru («Продукты»). Названия/описания существующих продуктов — отредактированные (сохраняются при синхронизации); новые продукты получают название и описание с сайта (source: site). Обновление — по команде «обнови продукты» (скилл brandbook → scripts/ds_products_sync.py).",
+      "policy": "Состав продуктов — по сайтам datasapience.ru («Платформы и продукты») и dataplatform.ru («Продукты»). Названия/описания существующих продуктов — отредактированные (сохраняются при синхронизации); новые продукты получают название и описание с сайта (source: site). Тексты и факты: Kolmogorov Chat — со страницы https://datasapience.ru/platforms/kolmogorov/chat; LLM-часть Kolmogorov AI (Continuity-LLM — фабрика AI-агентов, LLM-портал, готовые агенты) — с https://ai.datasapience.ru/ (термины — по rules_global.texts: AI, а не ИИ). Продукты из брошюры «Обзор технологических решений Data Sapience 2026», которых нет на сайтах, — source: brochure, защищены products_rules.json → keep_even_if_missing_on_site. Обновление — по команде «обнови продукты» (скилл brandbook → scripts/ds_products_sync.py).",
       "script": "scripts/ds_products_sync.py в приватном репозитории datasapience-brandbook-source (инструмент автора брендбука, публично не публикуется)"
     },
     "counts": {
       "lines": 6,
-      "products": 31,
+      "products": 34,
       "note": "Пересчитывается ds_products_sync.py; продукт = под-продукт линейки, линейка без под-продуктов = 1 продукт."
     }
   },
@@ -1025,7 +1048,7 @@
     "icons": "icons/ — icons-dark-on-light.jpg, icons-green-on-dark.jpg (превью) + icons-png-800.zip (340 линейных иконок PNG)",
     "patterns": "patterns/{png,eps,ai} — talys_pattern-01..12 (Blob/Glow 01–03, Blob Filled 04–06, Blob Outline 07–09, Ribbon 10–12)",
     "gradients": "gradients/{png,eps,ai} — talys_gradient-01..03",
-    "graphics": "graphics/ring.png (кольцо/орбита), graphics/hexagon-3d.png (объёмный шестиугольник), graphics/symbol-3d.png (3D-знак ds) — фирменные 3D-элементы для заполнения/акцента",
+    "graphics": "graphics/ring.png (кольцо/орбита), graphics/hexagon-3d.png (объёмный шестиугольник), graphics/symbol-3d.png (3D-знак ds) — фирменные 3D-элементы для заполнения/акцента; graphics/architecture/ds-architecture.png и .pdf — «Архитектура решений Data Sapience», схема продуктов из брошюры «Обзор технологических решений Data Sapience 2026» (тёмный фон, таблица линеек и продуктов, лого DS): ГОТОВОЕ решение — вставлять как есть (слайд/документ «продукты/архитектура»), не перерисовывать; перерисовывать/исправлять только по просьбе пользователя изменить схему",
     "missing": "Полный самостоятельный фирменный стиль Data Ocean — внешний (dataplatform.ru); в брендбуке/репо — только DS-перекрашенные («комплектные») версии логотипов Data Ocean.",
     "backgrounds": "backgrounds/ — готовые фоны (dark-cover.png, light-content.png) + types/ (6 превью типов из раздела 02). Блоки для сборки: patterns/, gradients/, graphics/hexagon.svg"
   },
