@@ -1109,7 +1109,9 @@
       "data_visualization",
       "colors",
       "typography",
-      "forms_glossary"
+      "forms_glossary",
+      "assets",
+      "products"
     ],
     "icon_usage": [
       "slides.icons",
